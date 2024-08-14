@@ -24,6 +24,119 @@ main {
   flex-grow: 1;
 }
 
+/* carousel--------------- */
+
+.imagenCarousel{
+  height: 800px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.efecto-zoom {
+  transition: transform 2s ease; /* Suaviza el efecto de zoom */
+}
+
+.efecto-zoom:hover {
+  transform: scale(1.1); /* Aumenta el tamaño de la imagen un 10% */
+}
+
+/* texto de la primera imagen */
+.carousel-one {
+  position: absolute; /* Necesario para posicionar los elementos hijos */
+  top: 50%; /* Centra verticalmente */
+  left: 50%; /* Alinea el texto a la derecha */
+  transform: translateY(-50%); /* Ajusta el centro verticalmente */
+  width: auto; /* Ajusta el ancho del texto */
+  text-align: center; /* Alinea el texto dentro del contenedor a la derecha */
+  padding: 20px; /* Opcional: Añade un poco de padding para que el texto no quede pegado al borde */
+}
+/* texto de la segunda y 3era imagen */
+.carousel-two{
+  position: absolute; /* Posiciona el contenedor de texto sobre la imagen */
+  top: 50%; /* Centra el texto verticalmente en la mitad de la imagen */
+  left: 10%; /* Alinea el contenedor de texto al borde izquierdo de la imagen */
+  transform: translateY(-50%); /* Ajusta el centro verticalmente */
+  width: auto; /* El ancho del texto se ajusta automáticamente */
+  text-align: left; /* Alinea el texto a la izquierda dentro del contenedor */
+  padding: 20px; /* Opcional: Añade espacio alrededor del texto */
+}
+
+.primer-texto {
+  margin: 0; /* Elimina el margen por defecto */
+  color:#fafbfb;/* Asegúrate de que el texto sea legible sobre la imagen */
+}
+.segundo-texto{
+  color: #1c1d1f;
+  margin: 0;
+  font-size: 60px;
+}
+.segundo-texto-p{
+  color: #1c1d1f;
+}
+.tercer-texto{
+  color: #fafbfb;
+}
+
+
+/* Tamaño para dispositivos medianos (768px a 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .imagenCarousel {
+    height: 300px; /* Ajusta la altura para dispositivos medianos */
+  }
+  .segundo-texto{
+    font-size: 30px;
+  }
+}
+
+/* Tamaño para dispositivos pequeños (menor de 768px) */
+@media (max-width: 767px) {
+  .imagenCarousel {
+    height: 150px; /* Ajusta la altura para dispositivos pequeños */
+  }
+}
+
+/*  Estilos del footer */
+
+.bg-color5 {
+  background-color: var(--color5);
+  color: #fafbfb;
+}
+
+.bg-color4 {
+  background-color: var(--color4);
+  color: #fafbfb;
+}
+
+.img-footer {
+  width: 100px;
+  height: 100px;
+}
+
+.link-footer {
+  color: #fafbfb;
+  text-decoration: none;
+  font-size:1.5rem;
+}
+
+.link-footer:hover {
+  color: var(--color2);
+  transition: 0.3s;
+}
+
+@media screen and (max-width:576px) {
+  .espacio {
+    padding-top:20px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .display-inline {
+    display: inline;
+    letter-spacing: 1rem;
+  }
+}
+
+
 /*  Estilos del footer */
 
 .bg-color5 {
