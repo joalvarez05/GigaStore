@@ -77,6 +77,18 @@ main {
   color: #fafbfb;
 }
 
+/* ?CATEGORIAS------------------------------ */
+.fondoBlanco{
+  background-color: var(--color1);
+}
+.card{
+  border: 7px solid var(--color1);
+}
+.card:hover{
+  box-shadow: 5px 5px 10px rgba(128, 128, 128, 0.977);
+  transition: 400ms;
+}
+
 
 /* Tamaño para dispositivos medianos (768px a 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
