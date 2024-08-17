@@ -30,8 +30,8 @@ main {
 }
 .card{
   border: 7px solid var(--color1);
-  position: relative; /* Necesario para posicionar la pseudo-clase ::before */
-  overflow: hidden; /* Evita que la línea de neón sobresalga del borde */
+  position: relative; 
+  overflow: hidden;
   z-index: 1;
 }
 
@@ -43,20 +43,18 @@ main {
   left: -2px;
   width: calc(100% + 4px);
   height: calc(100% + 4px);
-  border: 3px solid #00ffcc; /* Color neón */
+  border: 3px solid #00ffcc;
   transition: transform 0.5s ease;
   transform-origin: center;
   z-index: -1;
 }
 
 .card:hover::before {
-  transform: rotate(360deg); /* Gira la línea completamente */
+  transform: rotate(360deg);
 }
 .card:hover{
-  /* box-shadow: 7px 7px 10px rgba(128, 128, 128, 0.977); */
-  /* transition: 500ms; */
   cursor: pointer;
-  box-shadow: 7px 7px 15px rgba(0, 255, 204, 0.5); /* Sombra con efecto neón */
+  box-shadow: 7px 7px 15px rgba(0, 255, 204, 0.5); 
   transition: box-shadow 0.5s ease;
 }
 
