@@ -25,7 +25,9 @@ main {
 }
 
 /* ?PRODUCTOS------------------------------ */
-
+.precios{
+  color: #009a9f;
+}
 
 /* Tamaño para dispositivos medianos (768px a 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
