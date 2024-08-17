@@ -84,7 +84,7 @@ main {
   height: 50px; /* Alto del botón */
   border-radius: 50%; /* Botón redondo */
   background-color: rgba(113, 110, 110, 0.5); /* Fondo gris semitransparente */
-  border: solid 4px gray; /* Elimina el borde por defecto */
+  border: solid 4px gray;
   display: flex; /* Usa flexbox para centrar el contenido */
   align-items: center; /* Centra verticalmente el contenido */
   justify-content: center; /* Centra horizontalmente el contenido */
@@ -96,9 +96,10 @@ main {
 
 /* Cambio de color de fondo de las flechas al pasar el mouse */
 .carousel-control-prev:hover, .carousel-control-next:hover {
-  background-color: var(--color1); /* Fondo negro al pasar el mouse con algo de transparencia */
+  background-color: var(--color1);
   border: solid 3px rgba(0, 0, 0, 0.849);
 }
+
 
 
 
