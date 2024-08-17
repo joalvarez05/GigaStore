@@ -28,6 +28,18 @@ main {
 .precios{
   color: #009a9f;
 }
+.productos{
+  filter: opacity(60%)
+}
+.productos:hover{
+  position: relative;
+  bottom: 5px;
+  right: 5px;
+  filter: opacity(100%);
+  transition: 600ms;
+  box-shadow: 10px  10px 20px grey;
+  cursor: pointer;
+}
 
 /* Tamaño para dispositivos medianos (768px a 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
