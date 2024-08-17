@@ -85,6 +85,10 @@ main {
   border-radius: 50%; /* Botón redondo */
   background-color: rgba(113, 110, 110, 0.5); /* Fondo gris semitransparente */
   border: solid 4px gray; /* Elimina el borde por defecto */
+  display: flex; /* Usa flexbox para centrar el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  transform: translateY(-50%); /* Ajusta el centro verticalmente */
   top: 50%; /* Centra verticalmente en el carrusel */
   margin-left: 25px; /* Margen para separar del borde izquierdo */
   margin-right: 25px; /* Margen para separar del borde derecho */
@@ -95,6 +99,7 @@ main {
   background-color: var(--color1); /* Fondo negro al pasar el mouse con algo de transparencia */
   border: solid 3px rgba(0, 0, 0, 0.849);
 }
+
 
 
 /* Tamaño para dispositivos medianos (768px a 991px) */
