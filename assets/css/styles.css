@@ -24,7 +24,7 @@ main {
   flex-grow: 1;
 }
 
-/* carousel--------------- */
+/*? carousel--------------- */
 
 .imagenCarousel{
   height: 800px;
@@ -75,6 +75,25 @@ main {
 }
 .tercer-texto{
   color: #fafbfb;
+}
+
+
+/* Estilos para las flechas */
+.carousel-control-prev, .carousel-control-next {
+  width: 50px; /* Ancho del botón */
+  height: 50px; /* Alto del botón */
+  border-radius: 50%; /* Botón redondo */
+  background-color: rgba(113, 110, 110, 0.5); /* Fondo gris semitransparente */
+  border: solid 4px gray; /* Elimina el borde por defecto */
+  top: 50%; /* Centra verticalmente en el carrusel */
+  margin-left: 25px; /* Margen para separar del borde izquierdo */
+  margin-right: 25px; /* Margen para separar del borde derecho */
+}
+
+/* Cambio de color de fondo de las flechas al pasar el mouse */
+.carousel-control-prev:hover, .carousel-control-next:hover {
+  background-color: var(--color1); /* Fondo negro al pasar el mouse con algo de transparencia */
+  border: solid 3px rgba(0, 0, 0, 0.849);
 }
 
 
