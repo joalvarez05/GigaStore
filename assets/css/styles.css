@@ -45,6 +45,17 @@ main {
 .imgGammer{
   height: 300px;
 }
+.centrarBanner{
+  display: flex !important;
+  justify-content: center !important;
+}
+
+/* dispositivos grandes */
+@media (min-width: 992px){
+  .w75 {
+    width: 75%;
+  }
+}
 
 /* Tamaño para dispositivos medianos (768px a 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -63,6 +74,9 @@ main {
 @media (max-width: 767px) {
   .imagenCarousel {
     height: 150px; /* Ajusta la altura para dispositivos pequeños */
+  }
+  .ocultar-sm{
+    display: none !important;
   }
 }
 
