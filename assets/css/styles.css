@@ -391,6 +391,7 @@ main {
 }
 
 .btn-comprar {
+  display: block;
   background-color: var(--color1);
   border: none;
   outline: none;
