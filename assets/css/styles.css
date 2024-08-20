@@ -26,58 +26,48 @@ main {
   flex-grow: 1;
 }
 
+
+/* ?PRODUCTOS------------------------------ */
+.precios{
+  color: #009a9f;
+
 /*? carousel--------------- */
 
 .imagenCarousel{
   height: 800px;
   object-fit: cover;
   width: 100%;
+
+}
+.productos{
+  filter: opacity(60%)
+}
+.productos:hover{
+  position: relative;
+  bottom: 5px;
+  right: 5px;
+  filter: opacity(100%);
+  transition: 600ms;
+  box-shadow: 10px  10px 20px grey;
+  cursor: pointer;
 }
 
-.efecto-zoom {
-  transition: transform 2s ease; /* Suaviza el efecto de zoom */
+/* ?BANNER GAMMER----------------------------- */
+.imgGammer{
+  height: 300px;
+}
+.centrarBanner{
+  display: flex !important;
+  justify-content: center !important;
 }
 
-.efecto-zoom:hover {
-  transform: scale(1.1); /* Aumenta el tamaño de la imagen un 10% */
+/* dispositivos grandes */
+@media (min-width: 992px){
+  .w75 {
+    width: 75%;
+  }
 }
 
-/* texto de la primera imagen */
-.carousel-one {
-  position: absolute; /* Necesario para posicionar los elementos hijos */
-  top: 50%; /* Centra verticalmente */
-  left: 50%; /* Alinea el texto a la derecha */
-  transform: translateY(-50%); /* Ajusta el centro verticalmente */
-  width: auto; /* Ajusta el ancho del texto */
-  text-align: center; /* Alinea el texto dentro del contenedor a la derecha */
-  padding: 20px; /* Opcional: Añade un poco de padding para que el texto no quede pegado al borde */
-}
-/* texto de la segunda y 3era imagen */
-.carousel-two{
-  position: absolute; /* Posiciona el contenedor de texto sobre la imagen */
-  top: 50%; /* Centra el texto verticalmente en la mitad de la imagen */
-  left: 10%; /* Alinea el contenedor de texto al borde izquierdo de la imagen */
-  transform: translateY(-50%); /* Ajusta el centro verticalmente */
-  width: auto; /* El ancho del texto se ajusta automáticamente */
-  text-align: left; /* Alinea el texto a la izquierda dentro del contenedor */
-  padding: 20px; /* Opcional: Añade espacio alrededor del texto */
-}
-
-.primer-texto {
-  margin: 0; /* Elimina el margen por defecto */
-  color:#fafbfb;/* Asegúrate de que el texto sea legible sobre la imagen */
-}
-.segundo-texto{
-  color: #1c1d1f;
-  margin: 0;
-  font-size: 60px;
-}
-.segundo-texto-p{
-  color: #1c1d1f;
-}
-.tercer-texto{
-  color: #fafbfb;
-}
 
 
 /* Estilos para las flechas */
@@ -105,6 +95,7 @@ main {
 
 
 
+
 /* Tamaño para dispositivos medianos (768px a 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
   .imagenCarousel {
@@ -113,12 +104,21 @@ main {
   .segundo-texto{
     font-size: 30px;
   }
+  .imgGammer{
+    height: 200px;
+  }
 }
 
 /* Tamaño para dispositivos pequeños (menor de 768px) */
 @media (max-width: 767px) {
   .imagenCarousel {
     height: 150px; /* Ajusta la altura para dispositivos pequeños */
+  }
+  .ocultar-sm{
+    display: none !important;
+  }
+  .texto-centrado{
+    text-align: center;
   }
 }
 
