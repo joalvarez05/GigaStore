@@ -30,6 +30,7 @@ main {
 /* ?PRODUCTOS------------------------------ */
 .precios{
   color: #009a9f;
+}
 
 /*? carousel--------------- */
 
@@ -45,11 +46,12 @@ main {
   position: relative; 
   overflow: hidden;
   z-index: 1;
+}
 
 .productos{
   filter: opacity(60%)
 }
- descripcion-producto
+
 
 
 /* Línea giratoria con efecto neón */
@@ -73,7 +75,7 @@ main {
   cursor: pointer;
   box-shadow: 7px 7px 15px rgba(0, 255, 204, 0.5); 
   transition: box-shadow 0.5s ease;
-
+}
 /* texto de la primera imagen */
 .carousel-one {
   position: absolute; /* Necesario para posicionar los elementos hijos */
@@ -164,7 +166,7 @@ main {
   border: solid 3px rgba(0, 0, 0, 0.849);
 }
 
- descripcion-producto
+
 
 
 
