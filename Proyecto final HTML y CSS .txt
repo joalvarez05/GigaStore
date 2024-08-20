@@ -1,2 +1,5 @@
-Proyecto final HTML y CSS: 
-viewBox="150 -170 600 552"
+Proyecto GigaStore :
+
+Footer: A la hora de realizar el footer, lo primero que realice fue un wireframe a mano para tirar algunas ideas y luego de realizar un wireframe que me gustaba, lo diseñe en figma tanto para desktop como para  mobile y aunque esta no fue la versión final porque le cambie la ubicación, me sirvió mucho para no perder tiempo a la hora de pasarlo a código. 
+
+Página error-404: Cuando realize el push a GitHub de la rama "error-404" hice un pull-request a la rama "main" , cuando fue aceptado no encontré la forma de volver un paso atrás y eliminar ese push en la rama "main" y hacerlo en la rama "dev". 
