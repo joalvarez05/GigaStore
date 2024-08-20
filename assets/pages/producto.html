@@ -45,7 +45,7 @@
                 <a href="#" class="link-breadcrumb">Celulares</a>
               </li>
               <li class="breadcrumb-item">
-                Apple iPhone 14 Pro (256 GB) - Negro espacial
+                Apple iPhone 14 Pro Max (256 GB) - Negro espacial
               </li>
             </ul>
           </nav>
@@ -53,24 +53,32 @@
             <div class="d-flex col-12 col-md-7 col-lg-7 disposicion">
               <div>
                 <img
-                  src="../img/iphone-14-pro.webp"
-                  alt=""
+                  src="../img/iphone-15-pro-max.webp"
+                  alt="iphone 14 pro blanco"
+                  loading="lazy"
                   class="img-producto mb-3"
                 />
                 <img
-                  src="../img/iphone-14-pro.webp"
-                  alt=""
+                  src="../img/iphone-14-pro-costado1.webp"
+                  alt="iphone 14 pro"
                   class="img-producto"
+                  loading="lazy"
                 />
               </div>
-              <div>
-                <img src="../img/iphone-14-pro.webp" class="img-fluid" alt="" />
+              <div class="contenedor-zoom">
+                <div class="contenedor-in">
+                  <img
+                    src="../img/iphone-14-pro.webp"
+                    class=" imagen-zoom"
+                    alt="iphone 14 pro"
+                  />
+                </div>
               </div>
             </div>
             <div class="col-12 col-md-5 col-lg-5">
               <div>
                 <h1 class="h2">
-                  Apple iPhone 14 Pro (256 GB) - Negro espacial
+                  Apple iPhone 14 Pro Max (256 GB) - Negro espacial
                 </h1>
                 <span>Marca: <strong>Apple</strong> </span>
                 <span class="ms-3"
@@ -94,26 +102,31 @@
                       src="../img/iphone-celeste.webp"
                       alt="iphone 14 pro celeste"
                       class="img-producto"
-                      title="Celeste"
+                      loading="lazy"
+                      title="Iphone Celeste"
                   /></a>
                   <a href="#"
                     ><img
                       src="../img/iphone-amarillo.webp"
                       alt="iphone 14 pro amarillo"
                       class="img-producto"
-                      title="Amarillo"
+                      loading="lazy"
+                      title="Iphone Amarillo"
                   /></a>
                   <a href="#"
                     ><img
                       src="../img/iphone-blanco.webp"
                       alt="iphone 14 pro blanco"
                       class="img-producto"
-                      title="Blanco"
+                      loading="lazy"
+                      title="Iphone Blanco"
                   /></a>
                 </div>
               </div>
               <div class="my-3">
-                <a href="#" class="text-white"> Mirá todas las promociones</a>
+                <a href="#" class="text-white" title="Promociones">
+                  Mirá todas las promociones</a
+                >
               </div>
               <div class="my-3">
                 <span class="bg-black p-1 rounded-1 px-2 py-1 fw-medium"
@@ -121,16 +134,28 @@
                 >
               </div>
               <div class="my-3">
-                <span class="fw-bold">✔ Disponible en stock</span>
+                <span class="fw-bold text-white">✔ Disponible en stock</span>
               </div>
               <div>
                 <div class="cantidad">
-                  <button>&minus;</button>
-                  <input type="number" value="1" min="1" max="10" class="input-box"/>
-                  <button>&plus;</button>
+                  <button aria-label="Disminuir cantidad" aria-pressed="false">
+                    &minus;
+                  </button>
+                  <input
+                    type="number"
+                    value="1"
+                    min="1"
+                    max="10"
+                    class="input-box"
+                    aria-label="Cantidad de productos"
+                    id="cantidadDeProducto"
+                  />
+                  <button aria-label="Aumentar cantidad" aria-pressed="false">
+                    &plus;
+                  </button>
                 </div>
                 <div class="w-100 text-center my-3">
-                  <a href="#" class="btn-comprar">
+                  <a href="#" class="btn-comprar" title="Comprar">
                     <i class="bi bi-cart fs-5"></i> Comprar
                   </a>
                 </div>
@@ -185,7 +210,7 @@
                 <div>
                   <img
                     src="../img/foto-para-avatar.jpg"
-                    alt=""
+                    alt="avatar de usuario"
                     class="avatar"
                   />
                   <span class="ms-2 fs-5"> José Alvarez Domínguez</span>
@@ -241,8 +266,8 @@
               </div>
 
               <div>
-                <button class="btn btn-light">
-                  Útil <i class="bi bi-hand-thumbs-up"></i>
+                <button class="btn btn-light" id="btnMeGusta">
+                  Útil <i class="bi bi-hand-thumbs-up"></i> <span class="fw-light" id="MeGustaContador">21</span>
                 </button>
                 <button class="btn btn-light">
                   <i class="bi bi-hand-thumbs-down"></i>
@@ -266,11 +291,11 @@
               </div>
 
               <div>
-                <button class="btn btn-light">
+                <button class="btn btn-light" id="btnMeGusta1">
                   Útil <i class="bi bi-hand-thumbs-up"></i>
                 </button>
-                <button class="btn btn-light">
-                  <i class="bi bi-hand-thumbs-down"></i>
+                <button class="btn btn-light" id="btnNoMeGusta1">
+                  <i class="bi bi-hand-thumbs-down"></i> <span class="fw-light" id="NoMeGustaContador1">2</span>
                 </button>
               </div>
             </div>
@@ -294,6 +319,7 @@
                   src="../img/iphone-14-pro.webp"
                   class="card-img-top"
                   alt="iphone-14-pro"
+                  loading="lazy"
                 />
                 <hr />
                 <div class="card-body">
@@ -317,6 +343,7 @@
                   src="../img/iphone-14-pro.webp"
                   class="card-img-top"
                   alt="iphone-14-pro"
+                  loading="lazy"
                 />
                 <hr />
                 <div class="card-body">
@@ -340,6 +367,7 @@
                   src="../img/iphone-14-pro.webp"
                   class="card-img-top"
                   alt="iphone-14-pro"
+                  loading="lazy"
                 />
                 <hr />
                 <div class="card-body">
