@@ -26,21 +26,23 @@ main {
   flex-grow: 1;
 }
 
+
+/* ?PRODUCTOS------------------------------ */
+.precios{
+  color: #009a9f;
+
 /*? carousel--------------- */
 
 .imagenCarousel {
   height: 800px;
   object-fit: cover;
   width: 100%;
-}
 
-.efecto-zoom {
-  transition: transform 2s ease; /* Suaviza el efecto de zoom */
 }
-
-.efecto-zoom:hover {
-  transform: scale(1.1); /* Aumenta el tamaño de la imagen un 10% */
+.productos{
+  filter: opacity(60%)
 }
+ descripcion-producto
 
 /* texto de la primera imagen */
 .carousel-one {
@@ -79,6 +81,34 @@ main {
   color: #fafbfb;
 }
 
+.productos:hover{
+  position: relative;
+  bottom: 5px;
+  right: 5px;
+  filter: opacity(100%);
+  transition: 600ms;
+  box-shadow: 10px  10px 20px grey;
+  cursor: pointer;
+}
+
+/* ?BANNER GAMMER----------------------------- */
+.imgGammer{
+  height: 300px;
+}
+.centrarBanner{
+  display: flex !important;
+  justify-content: center !important;
+}
+
+/* dispositivos grandes */
+@media (min-width: 992px){
+  .w75 {
+    width: 75%;
+  }
+}
+
+
+
 /* Estilos para las flechas */
 .carousel-control-prev,
 .carousel-control-next {
@@ -102,6 +132,38 @@ main {
   background-color: var(--color1);
   border: solid 3px rgba(0, 0, 0, 0.849);
 }
+
+ descripcion-producto
+
+
+
+
+/* Tamaño para dispositivos medianos (768px a 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .imagenCarousel {
+    height: 300px; /* Ajusta la altura para dispositivos medianos */
+  }
+  .segundo-texto{
+    font-size: 30px;
+  }
+  .imgGammer{
+    height: 200px;
+  }
+}
+
+/* Tamaño para dispositivos pequeños (menor de 768px) */
+@media (max-width: 767px) {
+  .imagenCarousel {
+    height: 150px; /* Ajusta la altura para dispositivos pequeños */
+  }
+  .ocultar-sm{
+    display: none !important;
+  }
+  .texto-centrado{
+    text-align: center;
+  }
+}
+
 
 /*  Estilos del footer */
 
