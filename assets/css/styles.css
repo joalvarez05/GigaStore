@@ -36,7 +36,7 @@ main {
 }
 
 /* Línea giratoria con efecto neón */
-.card::before {
+.categorias::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -49,10 +49,10 @@ main {
   z-index: -1;
 }
 
-.card:hover::before {
+.categorias:hover::before {
   transform: rotate(360deg);
 }
-.card:hover{
+.categorias:hover{
   cursor: pointer;
   box-shadow: 7px 7px 15px rgba(0, 255, 204, 0.5); 
   transition: box-shadow 0.5s ease;
@@ -73,6 +73,66 @@ main {
 @media (max-width: 767px) {
   .imagenCarousel {
     height: 150px; /* Ajusta la altura para dispositivos pequeños */
+  }
+}
+
+/* medias queries productos-------------------------- */
+/* ?PRODUCTOS------------------------------ */
+.precios{
+  color: #009a9f;
+}
+.productos{
+  filter: opacity(60%)
+}
+.productos:hover{
+  position: relative;
+  bottom: 5px;
+  right: 5px;
+  filter: opacity(100%);
+  transition: 600ms;
+  box-shadow: 10px  10px 20px grey;
+  cursor: pointer;
+}
+
+/* ?BANNER GAMMER----------------------------- */
+.imgGammer{
+  height: 300px;
+}
+.centrarBanner{
+  display: flex !important;
+  justify-content: center !important;
+}
+
+/* dispositivos grandes */
+@media (min-width: 992px){
+  .w75 {
+    width: 75%;
+  }
+}
+
+/* Tamaño para dispositivos medianos (768px a 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .imagenCarousel {
+    height: 300px; /* Ajusta la altura para dispositivos medianos */
+  }
+  .segundo-texto{
+    font-size: 30px;
+  }
+  .imgGammer{
+    height: 200px;
+  }
+}
+
+/* Tamaño para dispositivos pequeños (menor de 768px) */
+@media (max-width: 767px) {
+  .imagenCarousel {
+    height: 150px; /* Ajusta la altura para dispositivos pequeños */
+  }
+  .ocultar-sm{
+    display: none !important;
+  }
+  .texto-centrado{
+    text-align: center;
   }
 }
 
