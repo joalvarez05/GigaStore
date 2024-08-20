@@ -78,6 +78,9 @@ main {
   .ocultar-sm{
     display: none !important;
   }
+  .texto-centrado{
+    text-align: center;
+  }
 }
 
 /*  Estilos del footer */
