@@ -39,10 +39,40 @@ main {
   width: 100%;
 
 }
+
+.card{
+  border: 7px solid var(--color1);
+  position: relative; 
+  overflow: hidden;
+  z-index: 1;
+
 .productos{
   filter: opacity(60%)
 }
  descripcion-producto
+
+
+/* Línea giratoria con efecto neón */
+.card::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  border: 3px solid #00ffcc;
+  transition: transform 0.5s ease;
+  transform-origin: center;
+  z-index: -1;
+}
+
+.card:hover::before {
+  transform: rotate(360deg);
+}
+.card:hover{
+  cursor: pointer;
+  box-shadow: 7px 7px 15px rgba(0, 255, 204, 0.5); 
+  transition: box-shadow 0.5s ease;
 
 /* texto de la primera imagen */
 .carousel-one {
@@ -89,6 +119,7 @@ main {
   transition: 600ms;
   box-shadow: 10px  10px 20px grey;
   cursor: pointer;
+
 }
 
 /* ?BANNER GAMMER----------------------------- */
