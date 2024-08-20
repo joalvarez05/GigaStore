@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Han+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 /*definimos la paleta de colores */
 :root {
   --color1: #fafbfb;
@@ -9,8 +11,8 @@
 
 * {
   -webkit-font-smoothing: antialiased;
-  font-family: "Proxima Nova", sans-serif;
-  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
 }
 
 body {
@@ -24,9 +26,18 @@ main {
   flex-grow: 1;
 }
 
+
 /* ?PRODUCTOS------------------------------ */
 .precios{
   color: #009a9f;
+
+/*? carousel--------------- */
+
+.imagenCarousel{
+  height: 800px;
+  object-fit: cover;
+  width: 100%;
+
 }
 .productos{
   filter: opacity(60%)
@@ -56,6 +67,34 @@ main {
     width: 75%;
   }
 }
+
+
+
+/* Estilos para las flechas */
+.carousel-control-prev, .carousel-control-next {
+  width: 50px; /* Ancho del botón */
+  height: 50px; /* Alto del botón */
+  border-radius: 50%; /* Botón redondo */
+  background-color: rgba(113, 110, 110, 0.5); /* Fondo gris semitransparente */
+  border: solid 4px gray;
+  display: flex; /* Usa flexbox para centrar el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  transform: translateY(-50%); /* Ajusta el centro verticalmente */
+  top: 50%; /* Centra verticalmente en el carrusel */
+  margin-left: 25px; /* Margen para separar del borde izquierdo */
+  margin-right: 25px; /* Margen para separar del borde derecho */
+}
+
+/* Cambio de color de fondo de las flechas al pasar el mouse */
+.carousel-control-prev:hover, .carousel-control-next:hover {
+  background-color: var(--color1);
+  border: solid 3px rgba(0, 0, 0, 0.849);
+}
+
+
+
+
 
 /* Tamaño para dispositivos medianos (768px a 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -128,8 +167,254 @@ main {
 /*  Estilos del footer */
 
 .bg-color5 {
-    background-color: var(--color5);
+  background-color: var(--color5);
+  color: #fafbfb;
 }
+
+.bg-color4 {
+  background-color: var(--color4);
+  color: #fafbfb;
+}
+
 .img-footer {
-    max-width: 100%;
+  width: 100px;
+  height: 100px;
+}
+
+.link-footer {
+  color: #fafbfb;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.link-footer:hover {
+  color: var(--color2);
+  transition: 0.3s;
+}
+
+/* Estilos pagina de error-404 */
+
+.error_logo {
+  width: 100px;
+  height: 100px;
+}
+.error_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 0 10px;
+}
+
+.error_code {
+  width: 100%;
+  margin: 0 auto;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.error_code p {
+  font-size: 6rem;
+}
+
+.error_code p:first-of-type {
+  animation: fall 0.8s linear;
+  transform: rotateZ(-20deg);
+}
+
+.error_code p:last-of-type {
+  animation: fall 1s linear;
+  transform: rotateZ(8deg);
+}
+
+.error_code p:nth-of-type(2) {
+  color: var(--color2);
+  animation: bounce 0.4s 1.8s linear forwards;
+  opacity: 0;
+}
+
+.error_title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  padding: 0 3%;
+  text-align: center;
+}
+
+.error_description {
+  font-size: 1.2rem;
+  text-align: justify;
+  line-height: 1.6;
+  padding: 0 10%;
+  color: var(--white);
+}
+.action {
+  font: inherit;
+  text-decoration: none;
+  padding: 10px 30px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background-color: var(--color2);
+  color: var(--color1);
+}
+.action:hover {
+  opacity: 0.8;
+}
+
+/* Pagina de contacto */
+
+.text-area-consulta {
+  resize: none;
+  max-height: 80px !important;
+  min-height: 60px !important;
+  field-sizing: content;
+}
+
+.mapaRolling {
+  border: 0;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.flexible {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 3rem;
+}
+
+.formularioResponsive {
+  width: 100%;
+}
+
+.paddingResponsive {
+  padding: 3rem;
+}
+
+/* Boton de submit de formulario de contacto */
+
+.btn-contacto {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: #ffffffc1;
+  box-shadow: 0 0 0 2px #ffffff20;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.btn-contacto span:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #2196F3;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.btn-contacto span:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-contacto:hover {
+  box-shadow: 0 0 0 5px #2195f360;
+  color: #ffffff;
+}
+
+.btn-contacto:active {
+  scale: 0.95;
+}
+
+.btn-contacto:hover span:last-child {
+  width: 150px;
+  height: 150px;
+  opacity: 1;
+}
+
+
+
+
+/* Media Queries: dispositivos pequeños */
+
+@media screen and (max-width: 576px) {
+  .error_logo {
+    width: 70px;
+    height: 70px;
+  }
+  .espacio {
+    padding-top: 20px;
+  }
+  .flexible {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0.75rem;
+  }
+}
+
+/* Media queries: dispositivos medianos */
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .display-inline {
+    display: inline;
+    letter-spacing: 1rem;
+  }
+  .flexible {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0.75rem;
+  }
+}
+
+/* animaciones */
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  40%,
+  75%,
+  95% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  15% {
+    transform: translateY(-25px);
+  }
+  65% {
+    transform: translateY(-15px);
+  }
+  85% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: rotateZ(45deg);
+    opacity: 1;
+  }
 }
