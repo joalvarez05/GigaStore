@@ -30,7 +30,7 @@ main {
 /* ?PRODUCTOS------------------------------ */
 .precios{
   color: #009a9f;
-
+}
 /*? carousel--------------- */
 
 .imagenCarousel {
@@ -45,11 +45,10 @@ main {
   position: relative; 
   overflow: hidden;
   z-index: 1;
-
+}
 .productos{
   filter: opacity(60%)
 }
- descripcion-producto
 
 
 /* Línea giratoria con efecto neón */
@@ -69,11 +68,12 @@ main {
 .categorias:hover::before {
   transform: rotate(360deg);
 }
+
 .categorias:hover{
   cursor: pointer;
   box-shadow: 7px 7px 15px rgba(0, 255, 204, 0.5); 
   transition: box-shadow 0.5s ease;
-
+}
 /* texto de la primera imagen */
 .carousel-one {
   position: absolute; /* Necesario para posicionar los elementos hijos */
@@ -164,12 +164,6 @@ main {
   border: solid 3px rgba(0, 0, 0, 0.849);
 }
 
- descripcion-producto
-
-
-
-
-
 /* Tamaño para dispositivos medianos (768px a 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
   .imagenCarousel {
@@ -242,6 +236,9 @@ main {
   .imgGammer{
     height: 200px;
   }
+  .precios {
+    text-wrap: nowrap;
+  }
 }
 
 /* Tamaño para dispositivos pequeños (menor de 768px) */
@@ -250,7 +247,7 @@ main {
     height: 150px; /* Ajusta la altura para dispositivos pequeños */
   }
   .ocultar-sm{
-    display: none !important;
+    display: none!important;
   }
   .texto-centrado{
     text-align: center;
