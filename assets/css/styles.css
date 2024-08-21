@@ -28,7 +28,7 @@ main {
 
 /*? carousel--------------- */
 
-.imagenCarousel{
+.imagenCarousel {
   height: 800px;
   object-fit: cover;
   width: 100%;
@@ -53,7 +53,7 @@ main {
   padding: 20px; /* Opcional: Añade un poco de padding para que el texto no quede pegado al borde */
 }
 /* texto de la segunda y 3era imagen */
-.carousel-two{
+.carousel-two {
   position: absolute; /* Posiciona el contenedor de texto sobre la imagen */
   top: 50%; /* Centra el texto verticalmente en la mitad de la imagen */
   left: 10%; /* Alinea el contenedor de texto al borde izquierdo de la imagen */
@@ -65,23 +65,23 @@ main {
 
 .primer-texto {
   margin: 0; /* Elimina el margen por defecto */
-  color:#fafbfb;/* Asegúrate de que el texto sea legible sobre la imagen */
+  color: #fafbfb; /* Asegúrate de que el texto sea legible sobre la imagen */
 }
-.segundo-texto{
+.segundo-texto {
   color: #1c1d1f;
   margin: 0;
   font-size: 60px;
 }
-.segundo-texto-p{
+.segundo-texto-p {
   color: #1c1d1f;
 }
-.tercer-texto{
+.tercer-texto {
   color: #fafbfb;
 }
 
-
 /* Estilos para las flechas */
-.carousel-control-prev, .carousel-control-next {
+.carousel-control-prev,
+.carousel-control-next {
   width: 50px; /* Ancho del botón */
   height: 50px; /* Alto del botón */
   border-radius: 50%; /* Botón redondo */
@@ -97,21 +97,18 @@ main {
 }
 
 /* Cambio de color de fondo de las flechas al pasar el mouse */
-.carousel-control-prev:hover, .carousel-control-next:hover {
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
   background-color: var(--color1);
   border: solid 3px rgba(0, 0, 0, 0.849);
 }
-
-
-
-
 
 /* Tamaño para dispositivos medianos (768px a 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
   .imagenCarousel {
     height: 300px; /* Ajusta la altura para dispositivos medianos */
   }
-  .segundo-texto{
+  .segundo-texto {
     font-size: 30px;
   }
 }
@@ -143,7 +140,7 @@ main {
 .link-footer {
   color: #fafbfb;
   text-decoration: none;
-  font-size:1.5rem;
+  font-size: 1.5rem;
 }
 
 .link-footer:hover {
@@ -151,9 +148,9 @@ main {
   transition: 0.3s;
 }
 
-@media screen and (max-width:576px) {
+@media screen and (max-width: 576px) {
   .espacio {
-    padding-top:20px;
+    padding-top: 20px;
   }
 }
 
@@ -163,7 +160,6 @@ main {
     letter-spacing: 1rem;
   }
 }
-
 
 /*  Estilos del footer */
 
@@ -320,4 +316,140 @@ main {
     transform: rotateZ(45deg);
     opacity: 1;
   }
+}
+
+/* NAVBAR */
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  margin-top: 60px;
+  flex-grow: 1;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo negro con transparencia */
+  color: #e74c3c;
+  border-radius: 10px;
+}
+
+.navbar-brand img {
+  max-width: 150px; /* Ajuste de tamaño máximo para el logo */
+  height: auto;
+  filter: invert(100%) brightness(100%);
+}
+
+.navbar-toggler {
+  border-color: #e74c3c; /* Color del borde del botón hamburguesa */
+}
+
+.nav-link {
+  color: #b9b8b8;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #e74c3c;
+}
+
+.search-form {
+  position: relative;
+  flex-grow: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.search-form input {
+  width: 100%;
+  padding-left: 40px; /* Espacio para el icono */
+  border-radius: 50px; /* Bordes redondeados */
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #e74c3c;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+}
+
+/* ACERCA DE NOSOTROS / EQUIPO */
+/* Titulo */
+.nosotrosTitulo {
+  background-color: #00000083;
+  margin-top: 10%;
+  border-radius: 80px;
+}
+
+.team-gallery {
+  background-color: #e74d3c;
+  margin-top: 60px;
+}
+
+.image-container {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 50%;
+}
+
+.image-container:hover::before {
+  opacity: 1;
+}
+
+.image-container:hover img {
+  transform: scale(1.1);
+}
+
+.image-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.team-member h5 {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #333;
+  font-weight: 700;
+}
+
+.A {
+  color: rgb(218, 69, 69);
+  text-decoration: none;
+}
+
+.team-gallery {
+  position: relative;
+  bottom: 10;
+}
+
+.Nosotros {
+  color: #e74c3c;
 }

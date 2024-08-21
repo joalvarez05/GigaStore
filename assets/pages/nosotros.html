@@ -3,32 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./assets/img/brand-svg.svg" type="image/svg+xml" />
-    <meta
-      name="author"
-      content="Alvarez Domínguez José Agustín, Juarez Rivas Nelson, Frías Ramiro"
-    />
-    <meta
-      name="keywords"
-      content="Tecnologia, celulares, televisores, usados, nuevos, segunda mano, reacondicionados, retro, consolas, ofertas."
-    />
-    <meta
-      name="description"
-      content="Encuentra los mejores celulares, consolas y televisores en GigaStore. Ofrecemos una amplia variedad de marcas y modelos a precios competitivos. Compra en línea con seguridad y disfruta de envío rápido. ¡Descubre nuestras ofertas hoy mismo!"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-    <title>GigaStore | Lo último en Tecnología</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Nosotros</title>
   </head>
   <body>
     <header>
@@ -53,10 +39,10 @@
           <!-- Logo -->
           <a
             class="navbar-brand d-flex align-items-center mx-2"
-            href="./index.html"
+            href="/GigaStore/index.html"
           >
             <img
-              src="./img/brand-svg.svg"
+              src="../img/brand-svg.svg"
               alt="Logo"
               class="logo bg-light"
               id="navbarLogo"
@@ -79,9 +65,7 @@
                 <a class="nav-link text-secondary" href="#">Contacto</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-secondary" href="./assets/pages/nosotros.html"
-                  >Equipo</a
-                >
+                <a class="nav-link text-secondary" href="./nosotros.html">Equipo</a>
               </li>
             </ul>
 
@@ -116,13 +100,13 @@
                 <i class="bi bi-person-vcard"> INGRESAR</i>
               </a>
               <a
-                href="./pages/carrito.html"
+                href="../pages/carrito.html"
                 class="btn text-white position-relative"
               >
                 <i class="bi bi-cart3"> CARRITO</i>
                 <span
                   class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
-                  >2</span
+                  >0</span
                 >
               </a>
             </div>
@@ -354,216 +338,79 @@
     </header>
 
     <main>
-      <section>
-        <div
-          id="carouselExampleCaptions"
-          data-bs-interval="4000"
-          class="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleCaptions"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img
-                src="/assets/img/tv-celular.webp"
-                class="d-block w-100 imagenCarousel img-fluid efecto-zoom position-relative"
-                alt="tv y celular"
-              />
-              <div class="carousel-one d-none d-md-block">
-                <h2 class="primer-texto fs-1">
-                  Llevate hasta $50.000 de regalo con esta promo
-                </h2>
-                <p class="primer-texto mt-3">
-                  o un Galaxy S24 o un Galaxy S23 FE con la compra de una tv
-                  Samsung
-                </p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img
-                src="/assets/img/PCD-Header-PC-REBAJAS1.webp"
-                class="d-block w-100 imagenCarousel img-fluid efecto-zoom"
-                alt="rebajas"
-              />
-              <div class="carousel-two d-none d-md-block">
-                <h2 class="segundo-texto">
-                  ¡Hasta 40% de descuento <br />
-                  en tus favoritos!
-                </h2>
-                <p class="mt-3 segundo-texto-p">En todas nuestras categorias</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img
-                src="/assets/img/PCD-Header-PC-FRIO.webp"
-                class="d-block w-100 imagenCarousel img-fluid efecto-zoom"
-                alt="heladera frio"
-              />
-              <div class="carousel-two d-none d-md-block">
-                <h2 class="segundo-texto tercer-texto">
-                  Suben las temperaturas,<br />bajan los frigos
-                </h2>
-                <p class="mt-3 tercer-texto">
-                  Anticipate al calor con hasta 42% de descuento
-                </p>
-              </div>
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev d-none d-sm-block"
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="prev"
+      <!-- NOSOTROS -->
+      <div class="container nosotrosTitulo p-1">
+        <div class="mx-5">
+          <h1
+            class="Nosotros row d-flex justify-content-center text-center my-5"
           >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next d-none d-sm-block"
-            type="button"
-            data-bs-target="#carouselExampleCaptions"
-            data-bs-slide="next"
+            Acerca de Nosotros
+          </h1>
+          <p class="row d-flex justify-content-center text-center">
+            Somos un grupo de estudiantes apasionados por el desarrollo web de
+            la comisión Web3 de
+            <code
+              ><a class="A" href="https://web.rollingcodeschool.com/"
+                >RollingCode School</a
+              ></code
+            >Nos impulsa el aprendizaje contínuo y la búsqueda de nuevas
+            experiencias.
+          </p>
+          <p
+            class="row d-flex justify-content-center text-center text-secondary mx-5 mb-5"
           >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+            "En cada nuevo desarrollo, la tecnología nos muestra que con
+            dedicación y creatividad, incluso los desafíos más complejos se
+            transforman en soluciones innovadoras que mejoran nuestras vidas."
+          </p>
         </div>
-      </section>
-      <section>
-        <article></article>
-      </section>
+      </div>
+
+      <div class="team-gallery py-5">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="team-member text-center">
+                <div class="image-container">
+                  <img
+                    src="../img/Ramiro.png"
+                    alt="Persona 1"
+                    class="img-fluid"
+                  />
+                </div>
+                <h5 class="mt-4 text-black">Ramiro Alberto Frías</h5>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="team-member text-center">
+                <div class="image-container">
+                  <img
+                    src="../img/Nelson.png"
+                    alt="Persona 2"
+                    class="img-fluid"
+                  />
+                </div>
+                <h5 class="mt-4 text-black">Nelson Juarez Rivas</h5>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="team-member text-center">
+                <div class="image-container">
+                  <img
+                    src="../img/José.png"
+                    alt="Persona 3"
+                    class="img-fluid"
+                  />
+                </div>
+                <h5 class="mt-4 text-black">José Alvarez Domínguez</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
-    <footer>
-      <section class="bg-color5 py-4">
-        <article class="container">
-          <div class="row text-center align-items-center">
-            <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-4">
-              <a href="./index.html">
-                <img
-                  src="./assets/img/brand-svg.svg"
-                  alt="logo de la empresa"
-                  class="img-footer"
-                  loading="lazy"
-                />
-              </a>
-            </div>
-            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
-              <h5 class="mb-3 fs-5">Redes sociales</h5>
-              <ul class="list-unstyled">
-                <li class="display-inline">
-                  <a href="#" class="bi bi-instagram link-footer"></a>
-                </li>
-                <li class="display-inline">
-                  <a href="#" class="bi bi-youtube link-footer"></a>
-                </li>
-                <li class="display-inline">
-                  <a href="#" class="bi bi-twitter-x link-footer"></a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
-              <h5 class="mb-3 fs-5">Categorías</h5>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#" class="link-footer fs-6" title="Celulares">
-                    Celulares</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="link-footer fs-6" title="Televisores"
-                    >Televisores</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="link-footer fs-6" title="Consolas"
-                    >Consolas</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="link-footer fs-6" title="Retro">Retro</a>
-                </li>
-                <li>
-                  <a href="#" class="link-footer fs-6" title="Reacondicionados"
-                    >Reacondicionados</a
-                  >
-                </li>
-              </ul>
-            </div>
-            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
-              <h5 class="mb-3 fs-5">Ayuda</h5>
-              <ul class="list-unstyled">
-                <li>
-                  <a
-                    href="#"
-                    class="link-footer fs-6"
-                    title="Preguntas frecuentes"
-                    >Preguntas frecuentes</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="link-footer fs-6" title="Sobre nosotros"
-                    >Sobre nosotros</a
-                  >
-                </li>
-                <li>
-                  <a href="#" class="link-footer fs-6" title="Contacto"
-                    >Contacto</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    class="link-footer fs-6"
-                    title="Botón de arrepentimiento"
-                    >Botón de arrepentimiento</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </article>
-      </section>
-      <section class="bg-color4 pt-4 pb-2">
-        <div class="container text-center">
-          <div class="row align-items-center">
-            <div class="col-12 col-sm-3 col-md-3 col-lg-3 mb-2">
-              <a href="#" class="nav-link fs-6">Términos y Condiciones</a>
-            </div>
-            <div class="col-12 col-sm-3 col-md-3 col-lg-3 mb-2">
-              <a href="#" class="nav-link fs-6">Configuración de cookies</a>
-            </div>
-            <div class="col-12 col-sm-3 col-md-3 col-lg-3 mb-2">
-              <a href="#" class="nav-link fs-6">Politicas de privacidad</a>
-            </div>
-            <div class="col-12 col-sm-3 col-md-3 col-lg-3">
-              <p class="fw-bold espacio">GigaStore, 2024 &copy;</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </footer>
+    <footer></footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
