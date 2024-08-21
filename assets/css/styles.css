@@ -26,21 +26,53 @@ main {
   flex-grow: 1;
 }
 
+
+/* ?PRODUCTOS------------------------------ */
+.precios{
+  color: #009a9f;
+
 /*? carousel--------------- */
 
 .imagenCarousel {
   height: 800px;
   object-fit: cover;
   width: 100%;
+
 }
 
-.efecto-zoom {
-  transition: transform 2s ease; /* Suaviza el efecto de zoom */
+.card{
+  border: 7px solid var(--color1);
+  position: relative; 
+  overflow: hidden;
+  z-index: 1;
+
+.productos{
+  filter: opacity(60%)
 }
 
-.efecto-zoom:hover {
-  transform: scale(1.1); /* Aumenta el tamaño de la imagen un 10% */
+
+
+/* Línea giratoria con efecto neón */
+.categorias::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  border: 3px solid #00ffcc;
+  transition: transform 0.5s ease;
+  transform-origin: center;
+  z-index: -1;
 }
+
+.categorias:hover::before {
+  transform: rotate(360deg);
+}
+.categorias:hover{
+  cursor: pointer;
+  box-shadow: 7px 7px 15px rgba(0, 255, 204, 0.5); 
+  transition: box-shadow 0.5s ease;
 
 /* texto de la primera imagen */
 .carousel-one {
@@ -79,6 +111,38 @@ main {
   color: #fafbfb;
 }
 
+
+
+.productos:hover{
+  position: relative;
+  bottom: 5px;
+  right: 5px;
+  filter: opacity(100%);
+  transition: 600ms;
+  box-shadow: 10px  10px 20px grey;
+  cursor: pointer;
+
+}
+
+/* ?BANNER GAMMER----------------------------- */
+.imgGammer{
+  height: 300px;
+}
+.centrarBanner{
+  display: flex !important;
+  justify-content: center !important;
+}
+
+/* dispositivos grandes */
+@media (min-width: 992px){
+  .w75 {
+    width: 75%;
+  }
+}
+
+
+
+
 /* Estilos para las flechas */
 .carousel-control-prev,
 .carousel-control-next {
@@ -103,13 +167,18 @@ main {
   border: solid 3px rgba(0, 0, 0, 0.849);
 }
 
+
+
 /* Tamaño para dispositivos medianos (768px a 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
   .imagenCarousel {
     height: 300px; /* Ajusta la altura para dispositivos medianos */
   }
-  .segundo-texto {
+  .segundo-texto{
     font-size: 30px;
+  }
+  .imgGammer{
+    height: 200px;
   }
 }
 
@@ -118,7 +187,76 @@ main {
   .imagenCarousel {
     height: 150px; /* Ajusta la altura para dispositivos pequeños */
   }
+  .ocultar-sm{
+    display: none !important;
+  }
+  .texto-centrado{
+    text-align: center;
+  }
 }
+
+
+/* medias queries productos-------------------------- */
+/* ?PRODUCTOS------------------------------ */
+.precios{
+  color: #009a9f;
+}
+.productos{
+  filter: opacity(60%)
+}
+.productos:hover{
+  position: relative;
+  bottom: 5px;
+  right: 5px;
+  filter: opacity(100%);
+  transition: 600ms;
+  box-shadow: 10px  10px 20px grey;
+  cursor: pointer;
+}
+
+/* ?BANNER GAMMER----------------------------- */
+.imgGammer{
+  height: 300px;
+}
+.centrarBanner{
+  display: flex !important;
+  justify-content: center !important;
+}
+
+/* dispositivos grandes */
+@media (min-width: 992px){
+  .w75 {
+    width: 75%;
+  }
+}
+
+  
+/* Tamaño para dispositivos medianos (768px a 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .imagenCarousel {
+    height: 300px; /* Ajusta la altura para dispositivos medianos */
+  }
+  .segundo-texto {
+    font-size: 30px;
+  }
+  .imgGammer{
+    height: 200px;
+  }
+}
+
+/* Tamaño para dispositivos pequeños (menor de 768px) */
+@media (max-width: 767px) {
+  .imagenCarousel {
+    height: 150px; /* Ajusta la altura para dispositivos pequeños */
+  }
+  .ocultar-sm{
+    display: none !important;
+  }
+  .texto-centrado{
+    text-align: center;
+  }
+}
+
 
 /*  Estilos del footer */
 
@@ -148,6 +286,7 @@ main {
   transition: 0.3s;
 }
 
+/* <<<<<<< nav */
 @media screen and (max-width: 576px) {
   .espacio {
     padding-top: 20px;
@@ -162,6 +301,7 @@ main {
 }
 
 /*  Estilos del footer */
+
 
 .bg-color5 {
   background-color: var(--color5);
@@ -248,6 +388,7 @@ main {
   padding: 0 10%;
   color: var(--white);
 }
+
 .action {
   font: inherit;
   text-decoration: none;
@@ -259,11 +400,244 @@ main {
   background-color: var(--color2);
   color: var(--color1);
 }
+
 .action:hover {
   opacity: 0.8;
 }
 
-/* Media Queries: dispositivos pequeños */
+/* Pagina de contacto */
+
+.text-area-consulta {
+  resize: none;
+  max-height: 80px !important;
+  min-height: 60px !important;
+  field-sizing: content;
+}
+
+.mapaRolling {
+  border: 0;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.flexible {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 3rem;
+}
+
+.formularioResponsive {
+  width: 100%;
+}
+
+.paddingResponsive {
+  padding: 3rem;
+}
+
+/* Boton de submit de formulario de contacto */
+
+.btn-contacto {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: #ffffffc1;
+  box-shadow: 0 0 0 2px #ffffff20;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn-contacto span:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #2196f3;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn-contacto span:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-contacto:hover {
+  box-shadow: 0 0 0 5px #2195f360;
+  color: #ffffff;
+}
+
+.btn-contacto:active {
+  scale: 0.95;
+}
+
+.btn-contacto:hover span:last-child {
+  width: 150px;
+  height: 150px;
+  opacity: 1;
+}
+
+/* Estilos página descripción de producto */
+
+.link-breadcrumb {
+  text-decoration: none;
+  color: var(--color2);
+  font-size: 1rem;
+}
+.link-breadcrumb:hover {
+  color: var(--color4);
+}
+
+.img-producto {
+  max-width: 60px;
+  max-height: 65px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid var(--color4);
+  border-radius: 8px;
+}
+
+.img-producto:hover {
+  background-color: var(--color1);
+  border: 2px solid #2196f3;
+  transition-duration: 0.2s;
+}
+
+.cantidad {
+  display: flex;
+  border: 2px solid #3498db;
+  border-radius: 4px;
+  border: none;
+  text-align: center;
+  overflow: hidden;
+  margin: 1rem 0rem;
+}
+
+.cantidad button {
+  background-color: var(--color1);
+  color: var(--color5);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  width: 30px;
+  height: auto;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.cantidad button:hover {
+  background-color: var(--color3);
+}
+
+.cantidad input {
+  width: 40px;
+  text-align: center;
+  border: none;
+  padding: 8px 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+.input-box {
+  width: 40px;
+  text-align: center;
+  border: none;
+  padding: 8px 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+.input-box::-webkit-inner-spin-button,
+.input-box::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.btn-comprar {
+  display: block;
+  background-color: var(--color1);
+  border: none;
+  outline: none;
+  text-decoration: none;
+  color: var(--color5);
+  width: 100%;
+  border-radius: 8px;
+  padding: 6px;
+  font-weight: bold;
+}
+
+.btn-comprar:hover {
+  background-color: var(--color5);
+  color: var(--color1);
+  transition-duration: 0.3s;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: var(--color2);
+  color: white;
+  font-size: 36px;
+  vertical-align: middle;
+}
+
+.bi-star-fill {
+  color: goldenrod;
+}
+
+.card__relacionados {
+  background-color: #c2ccfcd2;
+}
+
+.card__relacionados:hover {
+  box-shadow: 0px 0px 2px 2px #979fc68f;
+  transition-duration: 0.2s;
+}
+
+.contenedor-zoom {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.contenedor-in {
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s ease;
+}
+
+.contenedor-in:hover {
+  transform: scale(1.3);
+}
+
+.imagen-zoom {
+  display: block;
+  width: 100%;
+  
+  cursor: zoom-in;
+}
+
+.contenedor-zoom::after {
+  content: "";
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Media Queries: dispositivos extra pequeños */
 
 @media screen and (max-width: 576px) {
   .error_logo {
@@ -273,14 +647,60 @@ main {
   .espacio {
     padding-top: 20px;
   }
+  .flexible {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  .img-producto {
+    width: 60px;
+    margin: 0 !important;
+  }
+  .disposicion {
+    flex-direction: column;
+  }
+  .card__relacionados {
+    width: 90%;
+  }
+  .contenedor-in:hover{
+    transform: scale(1.2)
+  }
 }
 
-/* Media queries: dispositivos medianos */
+/* Media queries: dispositivos pequeños */
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
   .display-inline {
     display: inline;
     letter-spacing: 1rem;
+  }
+  .flexible {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0.75rem;
+  }
+}
+
+/* Tamaño para dispositivos medianos */
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .imagenCarousel {
+    height: 300px; /* Ajusta la altura para dispositivos medianos */
+  }
+  .segundo-texto {
+    font-size: 30px;
+  }
+}
+
+/* Tamaño para dispositivos pequeños (menor de 768px) */
+@media (max-width: 767px) {
+  .imagenCarousel {
+    height: 150px; /* Ajusta la altura para dispositivos pequeños */
   }
 }
 
