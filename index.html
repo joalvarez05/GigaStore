@@ -32,12 +32,8 @@
     <title>GigaStore | Lo último en Tecnología</title>
   </head>
   <body>
-
-    <header>
-      <nav
-        class="navbar navbar-expand-lg bg-black fixed-top container"
-        style="margin-top: 20px; border-radius: 10px"
-      >
+    <header id="navbar">
+      <nav class="navbar navbar-expand-lg bg-black fixed-top mt-1 rounded-2">
         <div class="container">
           <!-- Botón hamburguesa visible en todas las vistas -->
           <button
@@ -51,37 +47,35 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-
           <!-- Logo -->
-          <a
-            class="navbar-brand d-flex align-items-center mx-2"
-            href="./index.html"
-          >
-            <img
-              src="./img/brand-svg.svg"
-              alt="Logo"
-              class="logo bg-light"
-              id="navbarLogo"
-            />
-          </a>
-
+          <div>
+            <a class="mx-2" href="./index.html">
+              <img
+                src="./assets/img/brand-svg.svg"
+                alt="Logo"
+                class="mb-3"
+                id="navbarLogo"
+              />
+            </a>
+          </div>
           <!-- Menú de navegación -->
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" href="#">Productos</a>
+                <a class="nav-link active" href="#categorias">Productos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Segunda Mano</a>
+                <a class="nav-link" href="./assets/pages/error-404.html"
+                  >Reacondicionados</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Retro</a>
+                <a class="nav-link" href="./assets/pages/contacto.html"
+                  >Contacto</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link text-secondary" href="#">Contacto</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-secondary" href="./assets/pages/nosotros.html"
+                <a class="nav-link" href="./assets/pages/nosotros.html"
                   >Equipo</a
                 >
               </li>
@@ -118,7 +112,7 @@
                 <i class="bi bi-person-vcard"> INGRESAR</i>
               </a>
               <a
-                href="./pages/carrito.html"
+                href="./assets/pages/carrito.html"
                 class="btn text-white position-relative"
               >
                 <i class="bi bi-cart3"> CARRITO</i>
@@ -354,11 +348,10 @@
         </div>
       </div>
     </header>
-
     <main>
       <section>
         <div
-          id="carouselExampleCaptions"
+          id="carouselImg"
           data-bs-interval="4000"
           class="carousel slide"
           data-bs-ride="carousel"
@@ -366,7 +359,7 @@
           <div class="carousel-indicators">
             <button
               type="button"
-              data-bs-target="#carouselExampleCaptions"
+              data-bs-target="#carouselImg"
               data-bs-slide-to="0"
               class="active"
               aria-current="true"
@@ -374,22 +367,22 @@
             ></button>
             <button
               type="button"
-              data-bs-target="#carouselExampleCaptions"
+              data-bs-target="#carouselImg"
               data-bs-slide-to="1"
               aria-label="Slide 2"
             ></button>
             <button
               type="button"
-              data-bs-target="#carouselExampleCaptions"
+              data-bs-target="#carouselImg"
               data-bs-slide-to="2"
               aria-label="Slide 3"
             ></button>
           </div>
           <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item tamañoCarousel active">
               <img
-                src="/assets/img/tv-celular.webp"
-                class="d-block w-100 imagenCarousel img-fluid efecto-zoom position-relative"
+                src="./assets/img/tv-celular.webp"
+                class="d-block imagenCarousel1 img-fluid efecto-zoom"
                 alt="tv y celular"
               />
               <div class="carousel-one d-none d-md-block">
@@ -404,8 +397,8 @@
             </div>
             <div class="carousel-item">
               <img
-                src="/assets/img/PCD-Header-PC-REBAJAS1.webp"
-                class="d-block w-100 imagenCarousel img-fluid efecto-zoom"
+                src="./assets/img/PCD-Header-PC-REBAJAS1.webp"
+                class="d-block imagenCarousel img-fluid efecto-zoom"
                 alt="rebajas"
               />
               <div class="carousel-two d-none d-md-block">
@@ -418,8 +411,8 @@
             </div>
             <div class="carousel-item">
               <img
-                src="/assets/img/PCD-Header-PC-FRIO.webp"
-                class="d-block w-100 imagenCarousel img-fluid efecto-zoom"
+                src="./assets/img/PCD-Header-PC-FRIO.webp"
+                class="d-block imagenCarousel img-fluid efecto-zoom"
                 alt="heladera frio"
               />
               <div class="carousel-two d-none d-md-block">
@@ -435,7 +428,7 @@
           <button
             class="carousel-control-prev d-none d-sm-block"
             type="button"
-            data-bs-target="#carouselExampleCaptions"
+            data-bs-target="#carouselImg"
             data-bs-slide="prev"
           >
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -444,312 +437,488 @@
           <button
             class="carousel-control-next d-none d-sm-block"
             type="button"
-            data-bs-target="#carouselExampleCaptions"
+            data-bs-target="#carouselImg"
             data-bs-slide="next"
           >
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
         </div>
-      </section>
-      <section>
-        <article></article>
-      </section>
 
-    <header></header>
-    <main>
-
-      <!-- categorias------------>
-      <section class="container my-5">
-        <article class="row">
-          <div class="col-sm-12 col-md-3 mb-4">
-            <a href="#tecnologia" class="text-decoration-none">
-              <div class="card categorias fondoBlanco">
-                <img
-                  src="/assets/img/tecnologia.webp"
-                  class="card-img-top"
-                  alt="netbook"
-                />
-                <h5 class="card-title text-center text-dark fs-4 mt-3">
-                  Tecnología
-                </h5>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-3 mb-4">
-            <a href="#celulares" class="text-decoration-none">
-              <div class="card categorias fondoBlanco">
-                <img
-                  src="/assets/img/celulares.webp"
-                  class="card-img-top"
-                  alt="celular"
-                />
-                <h5 class="card-title text-center text-dark fs-4 mt-3">
-                  Celulares
-                </h5>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-3 mb-4">
-            <a href="#gammin" class="text-decoration-none">
-              <div class="card categorias fondoBlanco">
-                <img
-                  src="/assets/img/gaming.webp"
-                  class="card-img-top"
-                  alt="consola gaming"
-                />
-                <h5 class="card-title text-center text-dark fs-4 mt-3">
-                  Gaming
-                </h5>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-3 mb-4">
-            <a href="#electrodosmesticos" class="text-decoration-none">
-              <div class="card categorias fondoBlanco">
-                <img
-                  src="/assets/img/electrodomesticos.webp"
-                  class="card-img-top"
-                  alt="electrodomesticos"
-                />
-                <h5 class="card-title text-center text-dark fs-4 mt-3">
-                  Hogar
-                </h5>
-              </div>
-            </a>
-          </div>
-        </article>
-      </section>
-      <!-- grilla de productos ------------------------>
-      <section class="container my-4">
-        <h2 class="fw-bold my-4 texto-centrado">Auriculares</h2>
-        <article class="row">
-          <div class="col-sm-12 col-md-3 mb-4">
-            <a href="https://www.youtube.com/" target="_blank" class="text-decoration-none">
-              <div class="card bg-white text-dark productos">
-                <div class="card-header">
-                  <span class="badge text-bg-dark mt-2 ms-1">Plan Ahora 12</span>
+        <!-- categorias------------>
+        <section class="container my-5" id="categorias">
+          <article class="row">
+            <div class="col-sm-12 col-md-3 mb-4">
+              <a
+                href="./assets/pages/error-404.html"
+                class="text-decoration-none"
+              >
+                <div class="card categorias bg-white">
+                  <img
+                    src="./assets/img/tecnologia.webp"
+                    class="card-img-top"
+                    alt="notebooks"
+                  />
+                  <h5 class="card-title text-center text-dark fs-4 mt-3">
+                    Tecnología
+                  </h5>
                 </div>
-                <img src="assets\img\productos\auricularDaewoo.webp" class="card-img-top w-100 img-fluid" alt="auricular Daewoo">
-                <div class="card-body text-center">
-                  <h5 class="card-title fs-2 precios fw-bolder">$ 40.971</h5>
-                  <h5 class="card-subtitle overflow-hidden text-truncate fw-semibold">Auricular OnEar</h5>
-                  <p class=" card-text overflow-hidden text-truncate">
-                    Daewoo
-                  </p>
+              </a>
+            </div>
+            <div class="col-sm-12 col-md-3 mb-4">
+              <a
+                href="./assets/pages/seccionProductos.html"
+                class="text-decoration-none"
+              >
+                <div class="card categorias bg-white">
+                  <img
+                    src="./assets/img/celulares.webp"
+                    class="card-img-top"
+                    alt="celular"
+                  />
+                  <h5 class="card-title text-center text-dark fs-4 mt-3">
+                    Celulares
+                  </h5>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-3 mb-4">
-            <a href="https://www.youtube.com/" target="_blank" class="text-decoration-none">
-              <div class="card bg-white text-dark productos">
-                <div class="card-header">
-                  <span class="badge text-bg-dark mt-2 ms-1">Plan Ahora 12</span>
+              </a>
+            </div>
+            <div class="col-sm-12 col-md-3 mb-4">
+              <a
+                href="./assets/pages/error-404.html"
+                class="text-decoration-none"
+              >
+                <div class="card categorias bg-white">
+                  <img
+                    src="./assets/img/gaming.webp"
+                    class="card-img-top"
+                    alt="consola gaming"
+                  />
+                  <h5 class="card-title text-center text-dark fs-4 mt-3">
+                    Gaming
+                  </h5>
                 </div>
-                <img src="/assets/img/productos/auricularPanacom.webp" class="card-img-top w-100 img-fluid" alt="auricular panacom rosa">
-                <div class="card-body text-center">
-                  <h5 class="card-title fs-2 precios fw-bolder">$ 34.433</h5>
-                  <h5 class="card-subtitle overflow-hidden text-truncate fw-semibold">Auricular Audio rosa</h5>
-                  <p class=" card-text overflow-hidden text-truncate">
-                    Panacom
-                  </p>
+              </a>
+            </div>
+            <div class="col-sm-12 col-md-3 mb-4">
+              <a
+                href="./assets/pages/error-404.html"
+                class="text-decoration-none"
+              >
+                <div class="card categorias bg-white">
+                  <img
+                    src="./assets/img/electrodomesticos.webp"
+                    class="card-img-top"
+                    alt="electrodomesticos"
+                  />
+                  <h5 class="card-title text-center text-dark fs-4 mt-3">
+                    Hogar
+                  </h5>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-3 mb-4">
-            <a href="https://www.youtube.com/" target="_blank" class="text-decoration-none">
-              <div class="card bg-white text-dark productos">
-                <div class="card-header">
-                  <span class="badge text-bg-dark mt-2 ms-1">Plan Ahora 12</span>
+              </a>
+            </div>
+          </article>
+        </section>
+        <!-- grilla de productos ------------------------>
+        <section class="container my-4">
+          <h2 class="fw-bold my-4 texto-centrado">Auriculares</h2>
+          <article class="row">
+            <div class="col-sm-12 col-md-3 mb-4">
+              <a
+                href="./assets/pages/error-404.html"
+                target="_blank"
+                class="text-decoration-none"
+              >
+                <div class="card bg-white text-dark productos">
+                  <div class="card-header">
+                    <span class="badge text-bg-dark mt-2 ms-1"
+                      >Plan Ahora 12</span
+                    >
+                  </div>
+                  <img
+                    src="./assets/img/productos/auricularDaewoo.webp"
+                    class="card-img-top w-100 img-fluid"
+                    alt="auricular Daewoo"
+                  />
+                  <div class="card-body text-center">
+                    <h5 class="card-title fs-2 precios fw-bolder">$ 40.971</h5>
+                    <h5
+                      class="card-subtitle overflow-hidden text-truncate fw-semibold"
+                    >
+                      Auricular OnEar
+                    </h5>
+                    <p class="card-text overflow-hidden text-truncate">
+                      Daewoo
+                    </p>
+                  </div>
                 </div>
-                <img src="/assets/img/productos/auricularNoga.webp" class="card-img-top w-100 img-fluid" alt="auricular noga rojo">
-                <div class="card-body text-center">
-                  <h5 class="card-title fs-2 precios fw-bolder">$ 28.259</h5>
-                  <h5 class="card-subtitle overflow-hidden text-truncate fw-semibold">Auricular Noganet</h5>
-                  <p class=" card-text overflow-hidden text-truncate">
-                    Noga
-                  </p>
+              </a>
+            </div>
+            <div class="col-sm-12 col-md-3 mb-4">
+              <a
+                href="./assets/pages/error-404.html"
+                target="_blank"
+                class="text-decoration-none"
+              >
+                <div class="card bg-white text-dark productos">
+                  <div class="card-header">
+                    <span class="badge text-bg-dark mt-2 ms-1"
+                      >Plan Ahora 12</span
+                    >
+                  </div>
+                  <img
+                    src="./assets/img/productos/auricularPanacom.webp"
+                    class="card-img-top w-100 img-fluid"
+                    alt="auricular panacom rosa"
+                  />
+                  <div class="card-body text-center">
+                    <h5 class="card-title fs-2 precios fw-bolder">$ 34.433</h5>
+                    <h5
+                      class="card-subtitle overflow-hidden text-truncate fw-semibold"
+                    >
+                      Auricular Audio rosa
+                    </h5>
+                    <p class="card-text overflow-hidden text-truncate">
+                      Panacom
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-3 mb-4">
-            <a href="https://www.youtube.com/" target="_blank" class="text-decoration-none">
-              <div class="card bg-white text-dark productos ">
-                <div class="card-header">
-                  <span class="badge text-bg-dark mt-2 ms-1">Plan Ahora 12</span>
+              </a>
+            </div>
+            <div class="col-sm-12 col-md-3 mb-4">
+              <a
+                href="./assets/pages/error-404.html"
+                target="_blank"
+                class="text-decoration-none"
+              >
+                <div class="card bg-white text-dark productos">
+                  <div class="card-header">
+                    <span class="badge text-bg-dark mt-2 ms-1"
+                      >Plan Ahora 12</span
+                    >
+                  </div>
+                  <img
+                    src="./assets/img/productos/auricularNoga.webp"
+                    class="card-img-top w-100 img-fluid"
+                    alt="auricular noga rojo"
+                  />
+                  <div class="card-body text-center">
+                    <h5 class="card-title fs-2 precios fw-bolder">$ 28.259</h5>
+                    <h5
+                      class="card-subtitle overflow-hidden text-truncate fw-semibold"
+                    >
+                      Auricular Noganet
+                    </h5>
+                    <p class="card-text overflow-hidden text-truncate">Noga</p>
+                  </div>
                 </div>
-                <img src="/assets/img/productos/auricularSoul.webp" class="card-img-top w-100 img-fluid" alt="auricular soul verde">
-                <div class="card-body text-center">
-                  <h5 class="card-title fs-2 precios fw-bolder">$ 38.852</h5>
-                  <h5 class="card-subtitle overflow-hidden text-truncate fw-semibold">Auricular BT200VE</h5>
-                  <p class=" card-text overflow-hidden text-truncate">
-                    Soul
-                  </p>
+              </a>
+            </div>
+            <div class="col-sm-12 col-md-3 mb-4">
+              <a
+                href="./assets/pages/error-404.html"
+                target="_blank"
+                class="text-decoration-none"
+              >
+                <div class="card bg-white text-dark productos">
+                  <div class="card-header">
+                    <span class="badge text-bg-dark mt-2 ms-1"
+                      >Plan Ahora 12</span
+                    >
+                  </div>
+                  <img
+                    src="./assets/img/productos/auricularSoul.webp"
+                    class="card-img-top w-100 img-fluid"
+                    alt="auricular soul verde"
+                  />
+                  <div class="card-body text-center">
+                    <h5 class="card-title fs-2 precios fw-bolder">$ 38.852</h5>
+                    <h5
+                      class="card-subtitle overflow-hidden text-truncate fw-semibold"
+                    >
+                      Auricular BT200VE
+                    </h5>
+                    <p class="card-text overflow-hidden text-truncate">Soul</p>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-        </article>
-      </section>
+              </a>
+            </div>
+          </article>
+        </section>
         <!-- banner de gamming --------------------->
-      <section class="container-fluid my-4">
-        <article class="row">
-          <a href="#gammer" target="_blank">
-           <div class="col-md-12 my-4 ocultar-sm centrarBanner">
-            <img src="/assets/img/gammer.gif" class=" img-fluid rounded w75 w-md-100 imgGammer " alt="banner de gammer">
-           </div>
-          </a>
-        </article>
+        <section class="container-fluid my-4">
+          <article class="row">
+            <a href="./assets/pages/error-404.html" target="_blank">
+              <div class="col-md-12 my-4 ocultar-sm centrarBanner">
+                <img
+                  src="./assets/img/gammer.gif"
+                  class="img-fluid rounded w75 w-md-100 imgGammer"
+                  alt="banner de gammer"
+                />
+              </div>
+            </a>
+          </article>
+        </section>
+        <!-- seccion videojuegos -->
+        <section class="container my-4">
+          <h2 class="fw-bold my-4 texto-centrado">Gammer</h2>
+          <article class="row">
+            <div class="col-sm-12 col-md-3 mb-4">
+              <a
+                href="./assets/pages/error-404.html"
+                target="_blank"
+                class="text-decoration-none"
+              >
+                <div class="card bg-white text-dark productos">
+                  <div class="card-header">
+                    <span class="badge text-bg-dark mt-2 ms-1"
+                      >Plan Ahora 12</span
+                    >
+                  </div>
+                  <img
+                    src="assets\img/gaming/xbox serie.webp"
+                    class="card-img-top w-100 img-fluid"
+                    alt="xbox"
+                    loading="lazy"
+                  />
+                  <div class="card-body text-center">
+                    <h5 class="card-title fs-2 precios fw-bolder">$40.971</h5>
+                    <h5
+                      class="card-subtitle overflow-hidden text-truncate fw-semibold"
+                    >
+                      Xbox Series X 1TB SSD
+                    </h5>
+                    <p class="card-text overflow-hidden text-truncate">
+                      Microsoft
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-12 col-md-3 mb-4">
+              <a
+                href="./assets/pages/error-404.html"
+                target="_blank"
+                class="text-decoration-none"
+              >
+                <div class="card bg-white text-dark productos">
+                  <div class="card-header">
+                    <span class="badge text-bg-dark mt-2 ms-1"
+                      >Plan Ahora 12</span
+                    >
+                  </div>
+                  <img
+                    src="./assets/img/gaming/world of tanks.webp"
+                    class="card-img-top w-100 img-fluid"
+                    alt="juegos de tanques"
+                    loading="lazy"
+                  />
+                  <div class="card-body text-center">
+                    <h5 class="card-title fs-2 precios fw-bolder">$34.433</h5>
+                    <h5
+                      class="card-subtitle overflow-hidden text-truncate fw-semibold"
+                    >
+                      WORLD OF TANKS XBOX 360
+                    </h5>
+                    <p class="card-text overflow-hidden text-truncate">
+                      Microsoft
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-12 col-md-3 mb-4">
+              <a
+                href="./assets/pages/error-404.html"
+                target="_blank"
+                class="text-decoration-none"
+              >
+                <div class="card bg-white text-dark productos">
+                  <div class="card-header">
+                    <span class="badge text-bg-dark mt-2 ms-1"
+                      >Plan Ahora 12</span
+                    >
+                  </div>
+                  <img
+                    src="./assets/img/gaming/play6.webp"
+                    class="card-img-top w-100 img-fluid"
+                    alt="PlayStation5"
+                    loading="lazy"
+                  />
+                  <div class="card-body text-center">
+                    <h5 class="card-title fs-2 precios fw-bolder">$28.259</h5>
+                    <h5
+                      class="card-subtitle overflow-hidden text-truncate fw-semibold"
+                    >
+                      Play Station5
+                    </h5>
+                    <p class="card-text overflow-hidden text-truncate">Sony</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-12 col-md-3 mb-4">
+              <a
+                href="./assets/pages/error-404.html"
+                target="_blank"
+                class="text-decoration-none"
+              >
+                <div class="card bg-white text-dark productos">
+                  <div class="card-header">
+                    <span class="badge text-bg-dark mt-2 ms-1"
+                      >Plan Ahora 12</span
+                    >
+                  </div>
+                  <img
+                    src="./assets/img/gaming/mouse gammer optico.webp"
+                    class="card-img-top w-100 img-fluid"
+                    alt="mouse gammer"
+                    loading="lazy"
+                  />
+                  <div class="card-body text-center">
+                    <h5 class="card-title fs-2 precios fw-bolder">$38.852</h5>
+                    <h5
+                      class="card-subtitle overflow-hidden text-truncate fw-semibold"
+                    >
+                      Mouse Gamer Óptico Trust GXT 101D Gav Jungle Camuflado
+                      Verde
+                    </h5>
+                    <p class="card-text overflow-hidden text-truncate">Trust</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-12 col-md-3 mb-4">
+              <a
+                href="./assets/pages/error-404.html"
+                target="_blank"
+                class="text-decoration-none"
+              >
+                <div class="card bg-white text-dark productos">
+                  <div class="card-header">
+                    <span class="badge text-bg-dark mt-2 ms-1"
+                      >Plan Ahora 12</span
+                    >
+                  </div>
+                  <img
+                    src="./assets/img/gaming/productor remoto sony.webp"
+                    class="card-img-top w-100 img-fluid"
+                    alt="reproductor remoto sony"
+                    loading="lazy"
+                  />
+                  <div class="card-body text-center">
+                    <h5 class="card-title fs-2 precios fw-bolder">$630.999</h5>
+                    <h5
+                      class="card-subtitle overflow-hidden text-truncate fw-semibold"
+                    >
+                      Reproductor Remoto Sony PlayStation Portal
+                    </h5>
+                    <p class="card-text overflow-hidden text-truncate">Sony</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-12 col-md-3 mb-4">
+              <a
+                href="./assets/pages/error-404.html"
+                target="_blank"
+                class="text-decoration-none"
+              >
+                <div class="card bg-white text-dark productos">
+                  <div class="card-header">
+                    <span class="badge text-bg-dark mt-2 ms-1"
+                      >Plan Ahora 12</span
+                    >
+                  </div>
+                  <img
+                    src="./assets/img/gaming/joystick sony.webp"
+                    class="card-img-top w-100 img-fluid"
+                    alt="Joystick Sony"
+                    loading="lazy"
+                  />
+                  <div class="card-body text-center">
+                    <h5 class="card-title fs-2 precios fw-bolder">$146.999</h5>
+                    <h5
+                      class="card-subtitle overflow-hidden text-truncate fw-semibold"
+                    >
+                      Joystick Sony DualSense Midnight Black
+                    </h5>
+                    <p class="card-text overflow-hidden text-truncate">Sony</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-12 col-md-3 mb-4">
+              <a
+                href="./assets/pages/error-404.html"
+                target="_blank"
+                class="text-decoration-none"
+              >
+                <div class="card bg-white text-dark productos">
+                  <div class="card-header">
+                    <span class="badge text-bg-dark mt-2 ms-1"
+                      >Plan Ahora 12</span
+                    >
+                  </div>
+                  <img
+                    src="./assets/img/gaming/consola game stick.webp"
+                    class="card-img-top w-100 img-fluid"
+                    alt="consola game stick"
+                    loading="lazy"
+                  />
+                  <div class="card-body text-center">
+                    <h5 class="card-title fs-2 precios fw-bolder">$115.000</h5>
+                    <h5
+                      class="card-subtitle overflow-hidden text-truncate fw-semibold"
+                    >
+                      Consola Game Stick Lite 4k 2 Joysticks Inalámbricos
+                    </h5>
+                    <p class="card-text overflow-hidden text-truncate">
+                      Génerica
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-12 col-md-3 mb-4">
+              <a
+                href="./assets/pages/error-404.html"
+                target="_blank"
+                class="text-decoration-none"
+              >
+                <div class="card bg-white text-dark productos">
+                  <div class="card-header">
+                    <span class="badge text-bg-dark mt-2 ms-1"
+                      >Plan Ahora 12</span
+                    >
+                  </div>
+                  <img
+                    src="./assets/img/gaming/auricular gammin hyper.webp"
+                    class="card-img-top w-100 img-fluid"
+                    alt="auricular maxwell"
+                    loading="lazy"
+                  />
+                  <div class="card-body text-center flex-grow-1">
+                    <h5 class="card-title fs-2 precios fw-bolder">$400.191</h5>
+                    <h5
+                      class="card-subtitle overflow-hidden text-truncate fw-semibold"
+                    >
+                      Audifono Hyperx Cloud Iii Wireless 120 Horas Red Color
+                      Negro
+                    </h5>
+                    <p class="card-text overflow-hidden text-truncate">
+                      Hyperx
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </article>
+        </section>
+        <div>
+          <a href="#navbar" class="bi bi-arrow-up-square iconoFijo"></a>
+        </div>
       </section>
-      <!-- seccion videojuegos -->
-      <section class="container my-4">
-        <h2 class="fw-bold my-4 texto-centrado">Gammer</h2>
-        <article class="row">
-          <div class="col-sm-12 col-md-3 mb-4">
-            <a href="https://www.youtube.com/" target="_blank" class="text-decoration-none">
-              <div class="card bg-white text-dark productos">
-                <div class="card-header">
-                  <span class="badge text-bg-dark mt-2 ms-1">Plan Ahora 12</span>
-                </div>
-                <img src="assets\img/gaming/xbox serie.webp" class="card-img-top w-100 img-fluid" alt="xbox">
-                <div class="card-body text-center">
-                  <h5 class="card-title fs-2 precios fw-bolder">$40.971</h5>
-                  <h5 class="card-subtitle overflow-hidden text-truncate fw-semibold">Xbox Series X 1TB SSD</h5>
-                  <p class=" card-text overflow-hidden text-truncate">
-                    Microsoft
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-3 mb-4">
-            <a href="https://www.youtube.com/" target="_blank" class="text-decoration-none">
-              <div class="card bg-white text-dark productos">
-                <div class="card-header">
-                  <span class="badge text-bg-dark mt-2 ms-1">Plan Ahora 12</span>
-                </div>
-                <img src="/assets/img/gaming/world of tanks.webp" class="card-img-top w-100 img-fluid" alt="juegos de tanques">
-                <div class="card-body text-center">
-                  <h5 class="card-title fs-2 precios fw-bolder">$34.433</h5>
-                  <h5 class="card-subtitle overflow-hidden text-truncate fw-semibold">WORLD OF TANKS XBOX 360</h5>
-                  <p class=" card-text overflow-hidden text-truncate">
-                    Microsoft
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-3 mb-4">
-            <a href="https://www.youtube.com/" target="_blank" class="text-decoration-none">
-              <div class="card bg-white text-dark productos">
-                <div class="card-header">
-                  <span class="badge text-bg-dark mt-2 ms-1">Plan Ahora 12</span>
-                </div>
-                <img src="/assets/img/gaming/play6.webp" class="card-img-top w-100 img-fluid" alt="PlayStation5">
-                <div class="card-body text-center">
-                  <h5 class="card-title fs-2 precios fw-bolder">$28.259</h5>
-                  <h5 class="card-subtitle overflow-hidden text-truncate fw-semibold">Play Station5</h5>
-                  <p class=" card-text overflow-hidden text-truncate">
-                    Sony
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-3 mb-4">
-            <a href="https://www.youtube.com/" target="_blank" class="text-decoration-none">
-              <div class="card bg-white text-dark productos ">
-                <div class="card-header">
-                  <span class="badge text-bg-dark mt-2 ms-1">Plan Ahora 12</span>
-                </div>
-                <img src="/assets/img/gaming/mouse gammer optico.webp" class="card-img-top w-100 img-fluid" alt="mouse gammer">
-                <div class="card-body text-center">
-                  <h5 class="card-title fs-2 precios fw-bolder">$38.852</h5>
-                  <h5 class="card-subtitle overflow-hidden text-truncate fw-semibold">Mouse Gamer Óptico Trust GXT 101D Gav Jungle Camuflado Verde</h5>
-                  <p class=" card-text overflow-hidden text-truncate">
-                    Trust
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-3 mb-4">
-            <a href="https://www.youtube.com/" target="_blank" class="text-decoration-none">
-              <div class="card bg-white text-dark productos ">
-                <div class="card-header">
-                  <span class="badge text-bg-dark mt-2 ms-1">Plan Ahora 12</span>
-                </div>
-                <img src="/assets/img/gaming/productor remoto sony.webp" class="card-img-top w-100 img-fluid" alt="reproductor remoto sony">
-                <div class="card-body text-center">
-                  <h5 class="card-title fs-2 precios fw-bolder">$630.999</h5>
-                  <h5 class="card-subtitle overflow-hidden text-truncate fw-semibold">Reproductor Remoto Sony PlayStation Portal</h5>
-                  <p class=" card-text overflow-hidden text-truncate">
-                    Sony
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-3 mb-4">
-            <a href="https://www.youtube.com/" target="_blank" class="text-decoration-none">
-              <div class="card bg-white text-dark productos ">
-                <div class="card-header">
-                  <span class="badge text-bg-dark mt-2 ms-1">Plan Ahora 12</span>
-                </div>
-                <img src="/assets/img/gaming/joystick sony.webp" class="card-img-top w-100 img-fluid" alt="Joystick Sony">
-                <div class="card-body text-center">
-                  <h5 class="card-title fs-2 precios fw-bolder">$146.999</h5>
-                  <h5 class="card-subtitle overflow-hidden text-truncate fw-semibold">Joystick Sony DualSense Midnight Black</h5>
-                  <p class=" card-text overflow-hidden text-truncate">
-                    Sony
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-3 mb-4">
-            <a href="https://www.youtube.com/" target="_blank" class="text-decoration-none">
-              <div class="card bg-white text-dark productos ">
-                <div class="card-header">
-                  <span class="badge text-bg-dark mt-2 ms-1">Plan Ahora 12</span>
-                </div>
-                <img src="/assets/img/gaming/consola game stick.webp" class="card-img-top w-100 img-fluid" alt="consola game stick">
-                <div class="card-body text-center">
-                  <h5 class="card-title fs-2 precios fw-bolder">$115.000</h5>
-                  <h5 class="card-subtitle overflow-hidden text-truncate fw-semibold">Consola Game Stick Lite 4k 2 Joysticks Inalámbricos</h5>
-                  <p class=" card-text overflow-hidden text-truncate">
-                    Génerica
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col-sm-12 col-md-3 mb-4">
-            <a href="https://www.youtube.com/" target="_blank" class="text-decoration-none">
-              <div class="card bg-white text-dark productos ">
-                <div class="card-header">
-                  <span class="badge text-bg-dark mt-2 ms-1">Plan Ahora 12</span>
-                </div>
-                <img src="/assets/img/gaming/auricular gammin hyper.webp" class="card-img-top w-100 img-fluid" alt="auricular maxwell">
-                <div class="card-body text-center flex-grow-1">
-                  <h5 class="card-title fs-2 precios fw-bolder">$400.191</h5>
-                  <h5 class="card-subtitle overflow-hidden text-truncate fw-semibold">Audifono Hyperx Cloud Iii Wireless 120 Horas Red Color Negro</h5>
-                  <p class=" card-text overflow-hidden text-truncate">
-                    Hyperx
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-        </article>
-      </section>
-
-
     </main>
-
     <footer>
       <section class="bg-color5 py-4">
         <article class="container">
@@ -768,13 +937,22 @@
               <h5 class="mb-3 fs-5">Redes sociales</h5>
               <ul class="list-unstyled">
                 <li class="display-inline">
-                  <a href="#" class="bi bi-instagram link-footer"></a>
+                  <a
+                    href="./assets/pages/error-404.html"
+                    class="bi bi-instagram link-footer"
+                  ></a>
                 </li>
                 <li class="display-inline">
-                  <a href="#" class="bi bi-youtube link-footer"></a>
+                  <a
+                    href="./assets/pages/error-404.html"
+                    class="bi bi-youtube link-footer"
+                  ></a>
                 </li>
                 <li class="display-inline">
-                  <a href="#" class="bi bi-twitter-x link-footer"></a>
+                  <a
+                    href="./assets/pages/error-404.html"
+                    class="bi bi-twitter-x link-footer"
+                  ></a>
                 </li>
               </ul>
             </div>
@@ -782,25 +960,43 @@
               <h5 class="mb-3 fs-5">Categorías</h5>
               <ul class="list-unstyled">
                 <li>
-                  <a href="#" class="link-footer fs-6" title="Celulares">
+                  <a
+                    href="./assets/pages/error-404.html"
+                    class="link-footer fs-6"
+                    title="Celulares"
+                  >
                     Celulares</a
                   >
                 </li>
                 <li>
-                  <a href="#" class="link-footer fs-6" title="Televisores"
+                  <a
+                    href="./assets/pages/error-404.html"
+                    class="link-footer fs-6"
+                    title="Televisores"
                     >Televisores</a
                   >
                 </li>
                 <li>
-                  <a href="#" class="link-footer fs-6" title="Consolas"
+                  <a
+                    href="./assets/pages/error-404.html"
+                    class="link-footer fs-6"
+                    title="Consolas"
                     >Consolas</a
                   >
                 </li>
                 <li>
-                  <a href="#" class="link-footer fs-6" title="Retro">Retro</a>
+                  <a
+                    href="./assets/pages/error-404.html"
+                    class="link-footer fs-6"
+                    title="Retro"
+                    >Retro</a
+                  >
                 </li>
                 <li>
-                  <a href="#" class="link-footer fs-6" title="Reacondicionados"
+                  <a
+                    href="./assets/pages/error-404.html"
+                    class="link-footer fs-6"
+                    title="Reacondicionados"
                     >Reacondicionados</a
                   >
                 </li>
@@ -811,7 +1007,7 @@
               <ul class="list-unstyled">
                 <li>
                   <a
-                    href="#"
+                    href="./assets/pages/error-404.html"
                     class="link-footer fs-6"
                     title="Preguntas frecuentes"
                     >Preguntas frecuentes</a
@@ -844,13 +1040,13 @@
         <div class="container text-center">
           <div class="row align-items-center">
             <div class="col-12 col-sm-3 col-md-3 col-lg-3 mb-2">
-              <a href="#" class="nav-link fs-6">Términos y Condiciones</a>
+              <a href="./assets/pages/error-404.html" class="nav-link1 fs-6">Términos y Condiciones</a>
             </div>
             <div class="col-12 col-sm-3 col-md-3 col-lg-3 mb-2">
-              <a href="#" class="nav-link fs-6">Configuración de cookies</a>
+              <a href="./assets/pages/error-404.html" class="nav-link1 fs-6">Configuración de cookies</a>
             </div>
             <div class="col-12 col-sm-3 col-md-3 col-lg-3 mb-2">
-              <a href="#" class="nav-link fs-6">Politicas de privacidad</a>
+              <a href="./assets/pages/error-404.html" class="nav-link1 fs-6">Politicas de privacidad</a>
             </div>
             <div class="col-12 col-sm-3 col-md-3 col-lg-3">
               <p class="fw-bold espacio">GigaStore, 2024 &copy;</p>
