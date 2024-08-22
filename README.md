@@ -4,14 +4,17 @@ El proyecto está terminado, se pusieron en practica diferentes propiedades de c
 
 
 STACK
+
 Utilizamos HTML,CSS,JavaScript, una librería llamada "universe.io" y "Bootstrap".
 
 ###
 DEMO
+
 Puedes ver el proyecto aquí: https://gigastore1.netlify.app/
 
 ###
 AUTORES
+
 Jose Alvarez Dominguez  https://github.com/joalvarez05
 
 Ramiro Frias            https://github.com/ramirofrias24
