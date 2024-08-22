@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Han+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
 /* Definimos la paleta de colores */
 :root {
   --color1: #fafbfb;
@@ -22,8 +24,15 @@ body {
 }
 
 main {
-  margin-top: 20vh;
+  margin-top: 11vh;
   flex-grow: 1;
+}
+
+.tituloNav {
+  font-family: "Orbitron", "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
 /* Carousel */
@@ -399,6 +408,10 @@ main {
 
 /* Estilos página descripción de producto */
 
+.mt-7 {
+  margin-top: 60px;
+}
+
 .link-breadcrumb {
   text-decoration: none;
   color: var(--color2);
@@ -590,6 +603,7 @@ main {
     object-fit: cover;
     object-position: 0px;
   }
+  
 }
 
 /* Media queries: dispositivos pequeños */
@@ -606,6 +620,7 @@ main {
     width: 100%;
     padding: 0.75rem;
   }
+
 }
 
 /* Tamaño para dispositivos pequeños (menor de 768px) */
@@ -650,6 +665,9 @@ main {
 @media (min-width: 992px) {
   .w75 {
     width: 90%;
+  }
+  .tituloNav {
+    display: none;
   }
 }
 
