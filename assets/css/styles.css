@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Han+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
 
-/* Definimos la paleta de colores */
 :root {
   --color1: #fafbfb;
   --color2: #989d99;
@@ -131,21 +130,20 @@ main {
 /* Estilos para las flechas */
 .carousel-control-prev,
 .carousel-control-next {
-  width: 50px; /* Ancho del botón */
-  height: 50px; /* Alto del botón */
-  border-radius: 50%; /* Botón redondo */
-  background-color: rgba(113, 110, 110, 0.5); /* Fondo gris semitransparente */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(113, 110, 110, 0.5);
   border: solid 4px gray;
-  display: flex; /* Usa flexbox para centrar el contenido */
-  align-items: center; /* Centra verticalmente el contenido */
-  justify-content: center; /* Centra horizontalmente el contenido */
-  transform: translateY(-50%); /* Ajusta el centro verticalmente */
-  top: 50%; /* Centra verticalmente en el carrusel */
-  margin-left: 25px; /* Margen para separar del borde izquierdo */
-  margin-right: 25px; /* Margen para separar del borde derecho */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  top: 50%;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
-/* Cambio de color de fondo de las flechas al pasar el mouse */
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
   background-color: var(--color1);
@@ -171,48 +169,6 @@ main {
   transition: 600ms;
   box-shadow: 10px 10px 20px grey;
   cursor: pointer;
-}
-
-/*  Estilos del footer */
-
-.bg-color5 {
-  background-color: var(--color5);
-  color: #fafbfb;
-}
-
-.bg-color4 {
-  background-color: var(--color4);
-  color: #fafbfb;
-}
-
-.img-footer {
-  width: 100px;
-  height: 100px;
-}
-
-.link-footer {
-  color: #fafbfb;
-  text-decoration: none;
-  font-size: 1.5rem;
-}
-
-.link-footer:hover {
-  color: var(--color2);
-  transition: 0.3s;
-}
-
-/* <<<<<<< nav */
-@media screen and (max-width: 576px) {
-  .espacio {
-    padding-top: 20px;
-  }
-}
-
-@media screen and (min-width: 576px) and (max-width: 768px) {
-  .display-inline {
-    display: inline;
-    letter-spacing: 1rem;
-  }
 }
 
 /*  Estilos del footer */
@@ -560,151 +516,6 @@ main {
   z-index: 1;
 }
 
-/* Media Queries: dispositivos extra pequeños */
-
-@media screen and (max-width: 576px) {
-  .error_logo {
-    width: 70px;
-    height: 70px;
-  }
-  .espacio {
-    padding-top: 20px;
-  }
-  .flexible {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 0.75rem;
-  }
-
-  .img-producto {
-    width: 60px;
-    margin: 0 !important;
-  }
-  .disposicion {
-    flex-direction: column;
-  }
-  .card__relacionados {
-    width: 90%;
-  }
-  .contenedor-in:hover {
-    transform: scale(1.2);
-  }
-
-  .imagenCarousel {
-    height: 300px !important;
-    object-fit: cover;
-    object-position: 100%;
-  }
-
-  .imagenCarousel1 {
-    height: 300px !important;
-    object-fit: cover;
-    object-position: 0px;
-  }
-  
-}
-
-/* Media queries: dispositivos pequeños */
-
-@media screen and (min-width: 576px) and (max-width: 768px) {
-  .display-inline {
-    display: inline;
-    letter-spacing: 1rem;
-  }
-  .flexible {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 0.75rem;
-  }
-
-}
-
-/* Tamaño para dispositivos pequeños (menor de 768px) */
-@media (max-width: 767px) {
-  .ocultar-sm {
-    display: none !important;
-  }
-  .texto-centrado {
-    text-align: center;
-  }
-}
-
-/* Tamaño para dispositivos medianos (768px a 991px) */
-@media (min-width: 768px) and (max-width: 991px) {
-  .imagenCarousel,
-  .imagenCarousel1 {
-    height: 300px; /* Ajusta la altura para dispositivos medianos */
-  }
-
-  .segundo-texto {
-    font-size: 30px;
-  }
-
-  .imgGammer {
-    height: 200px;
-  }
-}
-
-@media (max-width: 767px) {
-  .dropdown {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .dropdown {
-    display: none;
-  }
-}
-
-/* dispositivos grandes */
-@media (min-width: 992px) {
-  .w75 {
-    width: 90%;
-  }
-  .tituloNav {
-    display: none;
-  }
-}
-
-/* animaciones */
-
-@keyframes fall {
-  0% {
-    transform: translateY(-100vh);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes bounce {
-  0%,
-  40%,
-  75%,
-  95% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  15% {
-    transform: translateY(-25px);
-  }
-  65% {
-    transform: translateY(-15px);
-  }
-  85% {
-    transform: translateY(-5px);
-  }
-  100% {
-    transform: rotateZ(45deg);
-    opacity: 1;
-  }
-}
-
 .iconoFijo {
   background-color: #e74c3c;
   color: white;
@@ -725,13 +536,13 @@ main {
 /* Navbar */
 
 .navbar {
-  background-color: rgba(0, 0, 0, 0.8); /* Fondo negro con transparencia */
+  background-color: rgba(0, 0, 0, 0.8);
   color: #e74c3c;
   border-radius: 10px;
 }
 
 .navbar-toggler {
-  border-color: #e74c3c; /* Color del borde del botón hamburguesa */
+  border-color: #e74c3c;
 }
 
 .nav-link {
@@ -762,8 +573,8 @@ main {
 
 .search-form input {
   width: 100%;
-  padding-left: 40px; /* Espacio para el icono */
-  border-radius: 50px; /* Bordes redondeados */
+  padding-left: 40px;
+  border-radius: 50px;
   background-color: #333;
   color: #fff;
   border: 1px solid #e74c3c;
@@ -847,4 +658,144 @@ main {
 
 .Nosotros {
   color: #e74c3c;
+}
+
+/* Media Queries: dispositivos extra pequeños */
+
+@media screen and (max-width: 576px) {
+  .error_logo {
+    width: 70px;
+    height: 70px;
+  }
+  .espacio {
+    padding-top: 20px;
+  }
+  .flexible {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  .img-producto {
+    width: 60px;
+    margin: 0 !important;
+  }
+  .disposicion {
+    flex-direction: column;
+  }
+  .card__relacionados {
+    width: 90%;
+  }
+  .contenedor-in:hover {
+    transform: scale(1.2);
+  }
+
+  .imagenCarousel {
+    height: 300px !important;
+    object-fit: cover;
+    object-position: 100%;
+  }
+
+  .imagenCarousel1 {
+    height: 300px !important;
+    object-fit: cover;
+    object-position: 0px;
+  }
+}
+
+/* Media queries: dispositivos pequeños */
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .display-inline {
+    display: inline;
+    letter-spacing: 1rem;
+  }
+  .flexible {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0.75rem;
+  }
+}
+
+/* Tamaño para dispositivos medianos (768px a 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .imagenCarousel,
+  .imagenCarousel1 {
+    height: 300px;
+  }
+
+  .segundo-texto {
+    font-size: 30px;
+  }
+
+  .imgGammer {
+    height: 200px;
+  }
+}
+
+/* Tamaño para dispositivos pequeños (menor de 768px) */
+@media (max-width: 767px) {
+  .dropdown {
+    display: block;
+  }
+  .ocultar-sm {
+    display: none !important;
+  }
+  .texto-centrado {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .dropdown {
+    display: none;
+  }
+}
+
+/* dispositivos grandes */
+@media (min-width: 992px) {
+  .w75 {
+    width: 90%;
+  }
+  .tituloNav {
+    display: none;
+  }
+}
+
+/* animaciones */
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  40%,
+  75%,
+  95% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  15% {
+    transform: translateY(-25px);
+  }
+  65% {
+    transform: translateY(-15px);
+  }
+  85% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: rotateZ(45deg);
+    opacity: 1;
+  }
 }
