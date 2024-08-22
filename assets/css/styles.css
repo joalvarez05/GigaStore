@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Han+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-/*definimos la paleta de colores */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+/* Definimos la paleta de colores */
 :root {
   --color1: #fafbfb;
   --color2: #989d99;
@@ -22,66 +24,113 @@ body {
 }
 
 main {
-  margin-top: 60px;
+  margin-top: 11vh;
   flex-grow: 1;
 }
 
-/*? carousel--------------- */
+.tituloNav {
+  font-family: "Orbitron", "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
 
-.imagenCarousel{
-  height: 800px;
+/* Carousel */
+.imagenCarousel,
+.imagenCarousel1 {
+  height: 600px;
   object-fit: cover;
   width: 100%;
 }
 
+.carousel-one,
+.carousel-two {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 20px;
+  width: auto;
+}
+
+.carousel-one {
+  left: 50%;
+  text-align: center;
+}
+
+.carousel-two {
+  left: 10%;
+  text-align: left;
+}
+
 .efecto-zoom {
-  transition: transform 2s ease; /* Suaviza el efecto de zoom */
+  transition: transform 2s ease;
 }
 
 .efecto-zoom:hover {
-  transform: scale(1.1); /* Aumenta el tamaño de la imagen un 10% */
+  transform: scale(1.1);
 }
 
-/* texto de la primera imagen */
-.carousel-one {
-  position: absolute; /* Necesario para posicionar los elementos hijos */
-  top: 50%; /* Centra verticalmente */
-  left: 50%; /* Alinea el texto a la derecha */
-  transform: translateY(-50%); /* Ajusta el centro verticalmente */
-  width: auto; /* Ajusta el ancho del texto */
-  text-align: center; /* Alinea el texto dentro del contenedor a la derecha */
-  padding: 20px; /* Opcional: Añade un poco de padding para que el texto no quede pegado al borde */
-}
-/* texto de la segunda y 3era imagen */
-.carousel-two{
-  position: absolute; /* Posiciona el contenedor de texto sobre la imagen */
-  top: 50%; /* Centra el texto verticalmente en la mitad de la imagen */
-  left: 10%; /* Alinea el contenedor de texto al borde izquierdo de la imagen */
-  transform: translateY(-50%); /* Ajusta el centro verticalmente */
-  width: auto; /* El ancho del texto se ajusta automáticamente */
-  text-align: left; /* Alinea el texto a la izquierda dentro del contenedor */
-  padding: 20px; /* Opcional: Añade espacio alrededor del texto */
+/* Categorías */
+.categorias {
+  position: relative;
+  overflow: hidden;
 }
 
-.primer-texto {
-  margin: 0; /* Elimina el margen por defecto */
-  color:#fafbfb;/* Asegúrate de que el texto sea legible sobre la imagen */
+.categorias::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  border: 2px solid #00ffcc;
+  transition: transform 0.5s ease;
+  transform-origin: center;
+  z-index: 0;
 }
-.segundo-texto{
-  color: #1c1d1f;
+
+.categorias:hover::before {
+  transform: rotate(360deg);
+}
+
+.categorias:hover {
+  cursor: pointer;
+  box-shadow: 7px 7px 15px rgba(0, 255, 204, 0.5);
+  transition: box-shadow 0.5s ease;
+}
+
+/* Texto del carousel */
+.primer-texto,
+.tercer-texto {
   margin: 0;
-  font-size: 60px;
-}
-.segundo-texto-p{
-  color: #1c1d1f;
-}
-.tercer-texto{
   color: #fafbfb;
 }
 
+.segundo-texto,
+.segundo-texto-p {
+  color: #1c1d1f;
+}
+
+.segundo-texto {
+  font-size: 60px;
+}
+
+.tercer-texto {
+  color: #fafbfb;
+}
+
+/* ?BANNER GAMMER----------------------------- */
+.imgGammer {
+  height: 300px;
+}
+
+.centrarBanner {
+  text-align: center;
+}
 
 /* Estilos para las flechas */
-.carousel-control-prev, .carousel-control-next {
+.carousel-control-prev,
+.carousel-control-next {
   width: 50px; /* Ancho del botón */
   height: 50px; /* Alto del botón */
   border-radius: 50%; /* Botón redondo */
@@ -97,30 +146,31 @@ main {
 }
 
 /* Cambio de color de fondo de las flechas al pasar el mouse */
-.carousel-control-prev:hover, .carousel-control-next:hover {
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
   background-color: var(--color1);
   border: solid 3px rgba(0, 0, 0, 0.849);
 }
 
-
-
-
-
-/* Tamaño para dispositivos medianos (768px a 991px) */
-@media (min-width: 768px) and (max-width: 991px) {
-  .imagenCarousel {
-    height: 300px; /* Ajusta la altura para dispositivos medianos */
-  }
-  .segundo-texto{
-    font-size: 30px;
-  }
+/* medias queries productos-------------------------- */
+/* ?PRODUCTOS------------------------------ */
+.precios {
+  color: #009a9f;
+  text-wrap: nowrap;
 }
 
-/* Tamaño para dispositivos pequeños (menor de 768px) */
-@media (max-width: 767px) {
-  .imagenCarousel {
-    height: 150px; /* Ajusta la altura para dispositivos pequeños */
-  }
+.productos {
+  filter: opacity(80%);
+}
+
+.productos:hover {
+  position: relative;
+  bottom: 5px;
+  right: 5px;
+  filter: opacity(100%);
+  transition: 600ms;
+  box-shadow: 10px 10px 20px grey;
+  cursor: pointer;
 }
 
 /*  Estilos del footer */
@@ -143,7 +193,7 @@ main {
 .link-footer {
   color: #fafbfb;
   text-decoration: none;
-  font-size:1.5rem;
+  font-size: 1.5rem;
 }
 
 .link-footer:hover {
@@ -151,9 +201,10 @@ main {
   transition: 0.3s;
 }
 
-@media screen and (max-width:576px) {
+/* <<<<<<< nav */
+@media screen and (max-width: 576px) {
   .espacio {
-    padding-top:20px;
+    padding-top: 20px;
   }
 }
 
@@ -163,7 +214,6 @@ main {
     letter-spacing: 1rem;
   }
 }
-
 
 /*  Estilos del footer */
 
@@ -252,6 +302,7 @@ main {
   padding: 0 10%;
   color: var(--white);
 }
+
 .action {
   font: inherit;
   text-decoration: none;
@@ -263,11 +314,253 @@ main {
   background-color: var(--color2);
   color: var(--color1);
 }
+
 .action:hover {
   opacity: 0.8;
 }
 
-/* Media Queries: dispositivos pequeños */
+/* Pagina de contacto */
+
+.text-area-consulta {
+  resize: none;
+  max-height: 80px !important;
+  min-height: 60px !important;
+  field-sizing: content;
+}
+
+.mapaRolling {
+  border: 0;
+  width: 100%;
+  border-radius: 8px;
+  opacity: 0.7;
+}
+
+.mapaRolling:hover {
+  opacity: 1;
+  transition-duration: 0.2s;
+}
+
+.flexible {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 3rem;
+}
+
+.formularioResponsive {
+  width: 100%;
+}
+
+.paddingResponsive {
+  padding: 3rem;
+}
+
+/* Boton de submit de formulario de contacto */
+
+.btn-contacto {
+  position: relative;
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  font-size: 16px;
+  background-color: inherit;
+  border-radius: 100px;
+  font-weight: 600;
+  color: #ffffffc1;
+  box-shadow: 0 0 0 2px #ffffff20;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn-contacto span:last-child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background-color: #2196f3;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn-contacto span:first-child {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-contacto:hover {
+  box-shadow: 0 0 0 5px #2195f360;
+  color: #ffffff;
+}
+
+.btn-contacto:active {
+  scale: 0.95;
+}
+
+.btn-contacto:hover span:last-child {
+  width: 150px;
+  height: 150px;
+  opacity: 1;
+}
+
+/* Estilos página descripción de producto */
+
+.mt-7 {
+  margin-top: 60px;
+}
+
+.link-breadcrumb {
+  text-decoration: none;
+  color: var(--color2);
+  font-size: 1rem;
+}
+.link-breadcrumb:hover {
+  color: var(--color4);
+}
+
+.img-producto {
+  max-width: 60px;
+  max-height: 65px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid var(--color4);
+  border-radius: 8px;
+}
+
+.img-producto:hover {
+  background-color: var(--color1);
+  border: 2px solid #2196f3;
+  transition-duration: 0.2s;
+}
+
+.cantidad {
+  display: flex;
+  border: 2px solid #3498db;
+  border-radius: 4px;
+  border: none;
+  text-align: center;
+  overflow: hidden;
+  margin: 1rem 0rem;
+}
+
+.cantidad button {
+  background-color: var(--color1);
+  color: var(--color5);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+  width: 30px;
+  height: auto;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.cantidad button:hover {
+  background-color: var(--color3);
+}
+
+.cantidad input {
+  width: 40px;
+  text-align: center;
+  border: none;
+  padding: 8px 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+.input-box {
+  width: 40px;
+  text-align: center;
+  border: none;
+  padding: 8px 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+.input-box::-webkit-inner-spin-button,
+.input-box::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.btn-comprar {
+  display: block;
+  background-color: var(--color1);
+  border: none;
+  outline: none;
+  text-decoration: none;
+  color: var(--color5);
+  width: 100%;
+  border-radius: 8px;
+  padding: 6px;
+  font-weight: bold;
+}
+
+.btn-comprar:hover {
+  background-color: var(--color5);
+  color: var(--color1);
+  transition-duration: 0.3s;
+}
+
+.avatar {
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: var(--color2);
+  color: white;
+  font-size: 36px;
+  vertical-align: middle;
+}
+
+.bi-star-fill {
+  color: goldenrod;
+}
+
+.card__relacionados {
+  background-color: #c2ccfcd2;
+}
+
+.card__relacionados:hover {
+  box-shadow: 0px 0px 2px 2px #979fc68f;
+  transition-duration: 0.2s;
+}
+
+.contenedor-zoom {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.contenedor-in {
+  width: 100%;
+  height: auto;
+  transition: transform 0.6s ease;
+}
+
+.contenedor-in:hover {
+  transform: scale(1.3);
+}
+
+.imagen-zoom {
+  display: block;
+  width: 100%;
+  cursor: zoom-in;
+}
+
+.contenedor-zoom::after {
+  content: "";
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Media Queries: dispositivos extra pequeños */
 
 @media screen and (max-width: 576px) {
   .error_logo {
@@ -277,14 +570,104 @@ main {
   .espacio {
     padding-top: 20px;
   }
+  .flexible {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+  .img-producto {
+    width: 60px;
+    margin: 0 !important;
+  }
+  .disposicion {
+    flex-direction: column;
+  }
+  .card__relacionados {
+    width: 90%;
+  }
+  .contenedor-in:hover {
+    transform: scale(1.2);
+  }
+
+  .imagenCarousel {
+    height: 300px !important;
+    object-fit: cover;
+    object-position: 100%;
+  }
+
+  .imagenCarousel1 {
+    height: 300px !important;
+    object-fit: cover;
+    object-position: 0px;
+  }
+  
 }
 
-/* Media queries: dispositivos medianos */
+/* Media queries: dispositivos pequeños */
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
   .display-inline {
     display: inline;
     letter-spacing: 1rem;
+  }
+  .flexible {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0.75rem;
+  }
+
+}
+
+/* Tamaño para dispositivos pequeños (menor de 768px) */
+@media (max-width: 767px) {
+  .ocultar-sm {
+    display: none !important;
+  }
+  .texto-centrado {
+    text-align: center;
+  }
+}
+
+/* Tamaño para dispositivos medianos (768px a 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .imagenCarousel,
+  .imagenCarousel1 {
+    height: 300px; /* Ajusta la altura para dispositivos medianos */
+  }
+
+  .segundo-texto {
+    font-size: 30px;
+  }
+
+  .imgGammer {
+    height: 200px;
+  }
+}
+
+@media (max-width: 767px) {
+  .dropdown {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .dropdown {
+    display: none;
+  }
+}
+
+/* dispositivos grandes */
+@media (min-width: 992px) {
+  .w75 {
+    width: 90%;
+  }
+  .tituloNav {
+    display: none;
   }
 }
 
@@ -320,4 +703,148 @@ main {
     transform: rotateZ(45deg);
     opacity: 1;
   }
+}
+
+.iconoFijo {
+  background-color: #e74c3c;
+  color: white;
+  position: fixed;
+  bottom: 40px;
+  right: 20px;
+  font-size: 24px;
+  border-radius: 9px;
+  padding: 2px 6px;
+  border: none;
+}
+
+.iconoFijo:hover {
+  box-shadow: 0 0 10px black;
+  transition-duration: 0s;
+}
+
+/* Navbar */
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo negro con transparencia */
+  color: #e74c3c;
+  border-radius: 10px;
+}
+
+.navbar-toggler {
+  border-color: #e74c3c; /* Color del borde del botón hamburguesa */
+}
+
+.nav-link {
+  color: #b9b8b8;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #e74c3c;
+}
+
+.nav-link1 {
+  color: var(--color1);
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.nav-link1:hover {
+  color: var(--color3);
+}
+
+.search-form {
+  position: relative;
+  flex-grow: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.search-form input {
+  width: 100%;
+  padding-left: 40px; /* Espacio para el icono */
+  border-radius: 50px; /* Bordes redondeados */
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #e74c3c;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+}
+
+/* ACERCA DE NOSOTROS / EQUIPO */
+/* Titulo */
+.nosotrosTitulo {
+  background-color: #00000083;
+  margin-top: 10%;
+  border-radius: 80px;
+}
+
+.team-gallery {
+  background-color: #e74d3c;
+  margin-top: 60px;
+  position: relative;
+  bottom: 10;
+}
+
+.image-container {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 50%;
+}
+
+.image-container:hover::before {
+  opacity: 1;
+}
+
+.image-container:hover img {
+  transform: scale(1.1);
+}
+
+.image-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.team-member h5 {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #333;
+  font-weight: 700;
+}
+
+.A {
+  color: rgb(218, 69, 69);
+  text-decoration: none;
+}
+
+.Nosotros {
+  color: #e74c3c;
 }

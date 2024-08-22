@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>Nosotros</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-black fixed-top mt-1 rounded-2">
+        <div class="container">
+          <!-- Botón hamburguesa visible en todas las vistas -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <span class="h1 text-white tituloNav"> GigaStore </span>
+          <!-- Logo -->
+          <div>
+            <a class="mx-2" href="../../index.html">
+              <img
+                src="../img/brand-svg.svg"
+                alt="Logo"
+                class="mb-3"
+                id="navbarLogo"
+              />
+            </a>
+          </div>
+          <!-- Menú de navegación -->
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/seccionProductos.html">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Reacondicionados</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./nosotros.html">Equipo</a>
+              </li>
+            </ul>
+
+            <!-- Formulario de búsqueda responsivo -->
+            <form
+              class="d-flex flex-grow-1 mx-4 search-form position-relative"
+              role="search"
+            >
+              <input
+                class="form-control rounded-pill ps-5 bg-black"
+                type="search"
+                placeholder="¿Qué estás buscando?"
+                aria-label="Buscar"
+                maxlength="150"
+              />
+              <span
+                class="search-icon position-absolute"
+                style="left: 15px; top: 50%; transform: translateY(-50%)"
+              >
+                <i class="bi bi-search"></i>
+              </span>
+            </form>
+
+            <!-- Iconos de usuario y carrito -->
+            <div class="d-flex align-items-center mt-3">
+              <a
+                href="#"
+                class="btn text-white me-3"
+                data-bs-toggle="modal"
+                data-bs-target="#authModal"
+              >
+                <i class="bi bi-person-vcard"> INGRESAR</i>
+              </a>
+              <a
+                href="../pages/carrito.html"
+                class="btn text-white position-relative"
+              >
+                <i class="bi bi-cart3"> CARRITO</i>
+                <span
+                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                  >0</span
+                >
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="authModal"
+        tabindex="-1"
+        aria-labelledby="authModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content rounded-4 shadow-lg border-0">
+            <div class="modal-header border-0">
+              <h5 class="modal-title" id="authModalLabel">Login</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <ul class="nav nav-tabs" id="authTabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a
+                    class="nav-link active"
+                    id="login-tab"
+                    data-bs-toggle="tab"
+                    href="#login"
+                    role="tab"
+                    aria-controls="login"
+                    aria-selected="true"
+                    >Iniciar sesión</a
+                  >
+                </li>
+                <li class="navItem" role="presentation">
+                  <a
+                    class="nav-link"
+                    id="register-tab"
+                    data-bs-toggle="tab"
+                    href="#register"
+                    role="tab"
+                    aria-controls="register"
+                    aria-selected="false"
+                    >Registrarse</a
+                  >
+                </li>
+              </ul>
+              <div class="tab-content pt-2" id="authTabsContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="login"
+                  role="tabpanel"
+                  aria-labelledby="login-tab"
+                >
+                  <form>
+                    <div class="mb-3">
+                      <label for="loginEmail" class="form-label"
+                        >Correo electrónico*</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="loginEmail"
+                        placeholder="E-mail"
+                        required
+                        maxlength="320"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="loginPassword" class="form-label"
+                        >Contraseña*</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="loginPassword"
+                        placeholder="Contraseña"
+                        required
+                        maxlength="320"
+                      />
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 mb-3">
+                      Iniciar sesión
+                    </button>
+                    <div class="d-flex flex-column gap-2">
+                      <a
+                        href="404.html"
+                        class="text-decoration-none text-primary text-center"
+                      >
+                        ¿Olvidaste tu contraseña?
+                      </a>
+                      <a href="404.html" class="btn btn-outline-light">
+                        <i class="bi bi-google"></i> Inicia sesión con Google
+                      </a>
+                      <a href="404.html" class="btn btn-outline-light">
+                        <i class="bi bi-facebook"></i> Inicia sesión con
+                        Facebook
+                      </a>
+                    </div>
+                  </form>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="register"
+                  role="tabpanel"
+                  aria-labelledby="register-tab"
+                >
+                  <form>
+                    <div class="mb-3">
+                      <label for="registerName" class="form-label"
+                        >Nombre y apellido*</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="registerName"
+                        placeholder="Nombre completo"
+                        required
+                        maxlength="320"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="registerUser" class="form-label"
+                        >Usuario*</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="registerUser"
+                        placeholder="Nombre de usuario"
+                        required
+                        maxlength="320"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="registerEmail" class="form-label"
+                        >Correo electrónico*</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="registerEmail"
+                        placeholder="E-mail"
+                        required
+                        maxlength="320"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="registerPhone" class="form-label"
+                        >Teléfono*</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="registerPhone"
+                        placeholder="Teléfono"
+                        required
+                        maxlength="320"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="registerHome" class="form-label"
+                        >Domicilio*</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="registerHome"
+                        placeholder="Domicilio"
+                        required
+                        maxlength="320"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="registerZipCode" class="form-label"
+                        >Código postal*</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="registerZipCode"
+                        placeholder="Código postal"
+                        required
+                        maxlength="320"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="registerPassword" class="form-label"
+                        >Contraseña*</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="registerPassword"
+                        placeholder="Contraseña"
+                        required
+                        maxlength="320"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="registerPassword" class="form-label"
+                        >Confirmar contraseña*</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="registerPassword"
+                        placeholder="Contraseña"
+                        required
+                        maxlength="320"
+                      />
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">
+                      Crear cuenta
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- NOSOTROS -->
+      <div class="container nosotrosTitulo p-1">
+        <div class="mx-5">
+          <h1 class="Nosotros text-center my-5">Acerca de Nosotros</h1>
+          <p class="row justify-content-center text-center">
+            Somos un grupo de estudiantes apasionados por el desarrollo web de
+            la comisión Web3 de
+            <code
+              ><a
+                class="A"
+                href="https://web.rollingcodeschool.com/"
+                title="Ir a la web de RollingCode"
+                target="_blank"
+                >RollingCode School</a
+              ></code
+            >Nos impulsa el aprendizaje contínuo y la búsqueda de nuevas
+            experiencias.
+          </p>
+          <p class="text-center text-secondary mx-5 mb-5">
+            "En cada nuevo desarrollo, la tecnología nos muestra que con
+            dedicación y creatividad, incluso los desafíos más complejos se
+            transforman en soluciones innovadoras que mejoran nuestras vidas."
+          </p>
+        </div>
+      </div>
+
+      <div class="team-gallery py-5">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="team-member text-center">
+                <div class="image-container">
+                  <img
+                    src="../img/Ramiro.png"
+                    alt="Persona 1"
+                    class="img-fluid"
+                  />
+                </div>
+                <h5 class="mt-4 text-black">Ramiro Alberto Frías</h5>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="team-member text-center">
+                <div class="image-container">
+                  <img
+                    src="../img/Nelson.png"
+                    alt="Persona 2"
+                    class="img-fluid"
+                  />
+                </div>
+                <h5 class="mt-4 text-black">Nelson Juarez Rivas</h5>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+              <div class="team-member text-center">
+                <div class="image-container">
+                  <img
+                    src="../img/José.png"
+                    alt="Persona 3"
+                    class="img-fluid"
+                  />
+                </div>
+                <h5 class="mt-4 text-black">José Alvarez Domínguez</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <section class="bg-color5 py-4">
+        <article class="container">
+          <div class="row text-center align-items-center">
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3 mb-4">
+              <a href="../../index.html">
+                <img
+                  src="../img/brand-svg.svg"
+                  alt="logo de la empresa"
+                  class="img-footer"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+              <h5 class="mb-3 fs-5">Redes sociales</h5>
+              <ul class="list-unstyled">
+                <li class="display-inline">
+                  <a
+                    href="./error-404.html"
+                    class="bi bi-instagram link-footer"
+                  ></a>
+                </li>
+                <li class="display-inline">
+                  <a
+                    href="./error-404.html"
+                    class="bi bi-youtube link-footer"
+                  ></a>
+                </li>
+                <li class="display-inline">
+                  <a
+                    href="./error-404.html"
+                    class="bi bi-twitter-x link-footer"
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+              <h5 class="mb-3 fs-5">Categorías</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a
+                    href="./error-404.html"
+                    class="link-footer fs-6"
+                    title="Celulares"
+                  >
+                    Celulares</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./error-404.html"
+                    class="link-footer fs-6"
+                    title="Televisores"
+                    >Televisores</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./error-404.html"
+                    class="link-footer fs-6"
+                    title="Consolas"
+                    >Consolas</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./error-404.html"
+                    class="link-footer fs-6"
+                    title="Retro"
+                    >Retro</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./error-404.html"
+                    class="link-footer fs-6"
+                    title="Reacondicionados"
+                    >Reacondicionados</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3 col-lg-3">
+              <h5 class="mb-3 fs-5">Ayuda</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a
+                    href="./error-404.html"
+                    class="link-footer fs-6"
+                    title="Preguntas frecuentes"
+                    >Preguntas frecuentes</a
+                  >
+                </li>
+                <li>
+                  <a href="./nosotros.html" class="link-footer fs-6" title="Sobre nosotros"
+                    >Sobre nosotros</a
+                  >
+                </li>
+                <li>
+                  <a href="./contacto.html" class="link-footer fs-6" title="Contacto"
+                    >Contacto</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="./error-404.html"
+                    class="link-footer fs-6"
+                    title="Botón de arrepentimiento"
+                    >Botón de arrepentimiento</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class="bg-color4 pt-4 pb-2">
+        <div class="container text-center">
+          <div class="row align-items-center">
+            <div class="col-12 col-sm-3 col-md-3 col-lg-3 mb-2">
+              <a href="./error-404.html" class="nav-link1 fs-6">Términos y Condiciones</a>
+            </div>
+            <div class="col-12 col-sm-3 col-md-3 col-lg-3 mb-2">
+              <a href="./error-404.html" class="nav-link1 fs-6">Configuración de cookies</a>
+            </div>
+            <div class="col-12 col-sm-3 col-md-3 col-lg-3 mb-2">
+              <a href="./error-404.html" class="nav-link1 fs-6">Politicas de privacidad</a>
+            </div>
+            <div class="col-12 col-sm-3 col-md-3 col-lg-3">
+              <p class="fw-bold espacio">GigaStore, 2024 &copy;</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
