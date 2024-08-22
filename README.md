@@ -13,5 +13,8 @@ Puedes ver el proyecto aquí: https://gigastore1.netlify.app/
 ###
 AUTORES
 Jose Alvarez Dominguez  https://github.com/joalvarez05
+
 Ramiro Frias            https://github.com/ramirofrias24
+
 Nelson Juarez Rivas     https://github.com/najr91
+
