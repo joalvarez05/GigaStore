@@ -597,7 +597,7 @@ main {
   background-color: #e74d3c;
   margin-top: 60px;
   position: relative;
-  bottom: 10;
+  bottom: 10px;
 }
 
 .image-container {
@@ -633,6 +633,7 @@ main {
 
 .image-container:hover::before {
   opacity: 1;
+  
 }
 
 .image-container:hover img {
@@ -677,10 +678,18 @@ main {
     width: 100%;
     padding: 0.75rem;
   }
-
   .img-producto {
     width: 60px;
     margin: 0 !important;
+  }
+  .productos {
+    filter: opacity(100%);
+  }
+  .productos:hover {
+    position: static;
+    filter: opacity(100%);
+    box-shadow: none;
+    cursor: default;
   }
   .disposicion {
     flex-direction: column;
