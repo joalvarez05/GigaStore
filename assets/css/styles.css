@@ -135,7 +135,7 @@ main {
   border-radius: 50%;
   background-color: rgba(113, 110, 110, 0.5);
   border: solid 4px gray;
-  display: flex;
+  display: flex!important;
   align-items: center;
   justify-content: center;
   transform: translateY(-50%);
@@ -253,10 +253,10 @@ main {
 
 .error_description {
   font-size: 1.2rem;
-  text-align: justify;
+  text-align: center;
   line-height: 1.6;
   padding: 0 10%;
-  color: var(--white);
+  color: var(--color1);
 }
 
 .action {
@@ -463,8 +463,8 @@ main {
 }
 
 .avatar {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   object-fit: cover;
   overflow: hidden;
   border-radius: 50%;
@@ -472,7 +472,7 @@ main {
   background-color: var(--color2);
   color: white;
   font-size: 36px;
-  vertical-align: middle;
+
 }
 
 .bi-star-fill {
