@@ -135,7 +135,7 @@ main {
   border-radius: 50%;
   background-color: rgba(113, 110, 110, 0.5);
   border: solid 4px gray;
-  display: flex!important;
+  display: flex !important;
   align-items: center;
   justify-content: center;
   transform: translateY(-50%);
@@ -159,6 +159,15 @@ main {
 
 .productos {
   filter: opacity(80%);
+}
+
+.like.liked {
+  background-color: rgb(132, 228, 129);
+  outline: none;
+}
+
+.unlike.unliked {
+  background-color: #ff3c26ba;
 }
 
 .productos:hover {
@@ -472,7 +481,6 @@ main {
   background-color: var(--color2);
   color: white;
   font-size: 36px;
-
 }
 
 .bi-star-fill {
@@ -633,7 +641,6 @@ main {
 
 .image-container:hover::before {
   opacity: 1;
-  
 }
 
 .image-container:hover img {
