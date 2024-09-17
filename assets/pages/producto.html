@@ -41,9 +41,7 @@
                 <a href="../../index.html" class="link-breadcrumb">Inicio</a>
               </li>
 
-              <li class="breadcrumb-item">
-                Play Station 5
-              </li>
+              <li class="breadcrumb-item">Play Station 5</li>
             </ul>
           </nav>
           <div class="row">
@@ -66,7 +64,7 @@
                 <div class="contenedor-in">
                   <img
                     src="../img/iphone-14-pro.webp"
-                    class=" imagen-zoom"
+                    class="imagen-zoom"
                     alt="iphone 14 pro"
                   />
                 </div>
@@ -229,10 +227,10 @@
                   </p>
                 </div>
                 <div>
-                  <button class="btn btn-light">
+                  <button class="btn btn-light like" id="btnMeGusta">
                     Útil <i class="bi bi-hand-thumbs-up"></i>
                   </button>
-                  <button class="btn btn-light">
+                  <button class="btn btn-light unlike" id="btnNoMeGusta" >
                     <i class="bi bi-hand-thumbs-down"></i>
                   </button>
                 </div>
@@ -263,10 +261,11 @@
               </div>
 
               <div>
-                <button class="btn btn-light" id="btnMeGusta">
-                  Útil <i class="bi bi-hand-thumbs-up"></i> <span class="fw-light" id="MeGustaContador">21</span>
+                <button class="btn btn-light like" id="btnMeGusta1">
+                  Útil <i class="bi bi-hand-thumbs-up"></i>
+                  <span class="fw-light" id="MeGustaContador">21</span>
                 </button>
-                <button class="btn btn-light">
+                <button class="btn btn-light unlike" id="btnNoMeGusta1" >
                   <i class="bi bi-hand-thumbs-down"></i>
                 </button>
               </div>
@@ -288,11 +287,12 @@
               </div>
 
               <div>
-                <button class="btn btn-light" id="btnMeGusta1">
+                <button class="btn btn-light like" id="btnMeGusta2">
                   Útil <i class="bi bi-hand-thumbs-up"></i>
                 </button>
-                <button class="btn btn-light" id="btnNoMeGusta1">
-                  <i class="bi bi-hand-thumbs-down"></i> <span class="fw-light" id="NoMeGustaContador1">2</span>
+                <button class="btn btn-light unlike" id="btnNoMeGusta2" >
+                  <i class="bi bi-hand-thumbs-down"></i>
+                  <span class="fw-light" id="NoMeGustaContador1">2</span>
                 </button>
               </div>
             </div>
@@ -495,5 +495,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>
